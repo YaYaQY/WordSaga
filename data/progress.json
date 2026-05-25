@@ -1,0 +1,221 @@
+{
+  "version": 1,
+  "words": {
+    "the": {
+      "word": "the",
+      "meaning": "这个、这些",
+      "level": "basic",
+      "frequency": 86015,
+      "seen_count": 1,
+      "wrong_count": 1,
+      "correct_count": 0,
+      "mastery": 0.0,
+      "related_stories": [
+        {
+          "title": "悄悄靠近的告白",
+          "summary": "一个害羞的男生在校园里寻找机会向喜欢的女生表达心意，却意外发现她也在等他。",
+          "seen_at": "2026-05-24T13:00:47.491904+00:00"
+        }
+      ],
+      "last_seen": "2026-05-24T13:00:47.491904+00:00"
+    },
+    "a": {
+      "word": "a",
+      "meaning": "一、每一",
+      "level": "basic",
+      "frequency": 50252,
+      "seen_count": 1,
+      "wrong_count": 1,
+      "correct_count": 0,
+      "mastery": 0.0,
+      "related_stories": [
+        {
+          "title": "悄悄靠近的告白",
+          "summary": "一个害羞的男生在校园里寻找机会向喜欢的女生表达心意，却意外发现她也在等他。",
+          "seen_at": "2026-05-24T13:00:47.491904+00:00"
+        }
+      ],
+      "last_seen": "2026-05-24T13:00:47.491904+00:00"
+    },
+    "to": {
+      "word": "to",
+      "meaning": "目的、终点",
+      "level": "basic",
+      "frequency": 44609,
+      "seen_count": 1,
+      "wrong_count": 1,
+      "correct_count": 0,
+      "mastery": 0.0,
+      "related_stories": [
+        {
+          "title": "悄悄靠近的告白",
+          "summary": "一个害羞的男生在校园里寻找机会向喜欢的女生表达心意，却意外发现她也在等他。",
+          "seen_at": "2026-05-24T13:00:47.491904+00:00"
+        }
+      ],
+      "last_seen": "2026-05-24T13:00:47.491904+00:00"
+    },
+    "and": {
+      "word": "and",
+      "meaning": "和",
+      "level": "basic",
+      "frequency": 28550,
+      "seen_count": 1,
+      "wrong_count": 1,
+      "correct_count": 0,
+      "mastery": 0.0,
+      "related_stories": [
+        {
+          "title": "悄悄靠近的告白",
+          "summary": "一个害羞的男生在校园里寻找机会向喜欢的女生表达心意，却意外发现她也在等他。",
+          "seen_at": "2026-05-24T13:00:47.491904+00:00"
+        }
+      ],
+      "last_seen": "2026-05-24T13:00:47.491904+00:00"
+    },
+    "in": {
+      "word": "in",
+      "meaning": "在…内、范围",
+      "level": "basic",
+      "frequency": 28481,
+      "seen_count": 1,
+      "wrong_count": 1,
+      "correct_count": 0,
+      "mastery": 0.0,
+      "related_stories": [
+        {
+          "title": "悄悄靠近的告白",
+          "summary": "一个害羞的男生在校园里寻找机会向喜欢的女生表达心意，却意外发现她也在等他。",
+          "seen_at": "2026-05-24T13:00:47.491904+00:00"
+        }
+      ],
+      "last_seen": "2026-05-24T13:00:47.491904+00:00"
+    },
+    "have": {
+      "word": "have",
+      "meaning": "有",
+      "level": "basic",
+      "frequency": 15599,
+      "seen_count": 1,
+      "wrong_count": 1,
+      "correct_count": 0,
+      "mastery": 0.0,
+      "related_stories": [
+        {
+          "title": "悄悄靠近的告白",
+          "summary": "一个害羞的男生在校园里寻找机会向喜欢的女生表达心意，却意外发现她也在等他。",
+          "seen_at": "2026-05-24T13:00:47.491904+00:00"
+        }
+      ],
+      "last_seen": "2026-05-24T13:00:47.491904+00:00"
+    },
+    "that": {
+      "word": "that",
+      "meaning": "那",
+      "level": "basic",
+      "frequency": 14916,
+      "seen_count": 1,
+      "wrong_count": 0,
+      "correct_count": 1,
+      "mastery": 1.0,
+      "related_stories": [
+        {
+          "title": "悄悄靠近的告白",
+          "summary": "一个害羞的男生在校园里寻找机会向喜欢的女生表达心意，却意外发现她也在等他。",
+          "seen_at": "2026-05-24T13:00:47.491904+00:00"
+        }
+      ],
+      "last_seen": "2026-05-24T13:00:47.491904+00:00"
+    },
+    "for": {
+      "word": "for",
+      "meaning": "原因、对象",
+      "level": "basic",
+      "frequency": 13733,
+      "seen_count": 1,
+      "wrong_count": 1,
+      "correct_count": 0,
+      "mastery": 0.0,
+      "related_stories": [
+        {
+          "title": "悄悄靠近的告白",
+          "summary": "一个害羞的男生在校园里寻找机会向喜欢的女生表达心意，却意外发现她也在等他。",
+          "seen_at": "2026-05-24T13:00:47.491904+00:00"
+        }
+      ],
+      "last_seen": "2026-05-24T13:00:47.491904+00:00"
+    },
+    "on": {
+      "word": "on",
+      "meaning": "在…上、持续",
+      "level": "basic",
+      "frequency": 12004,
+      "seen_count": 1,
+      "wrong_count": 0,
+      "correct_count": 1,
+      "mastery": 1.0,
+      "related_stories": [
+        {
+          "title": "悄悄靠近的告白",
+          "summary": "一个害羞的男生在校园里寻找机会向喜欢的女生表达心意，却意外发现她也在等他。",
+          "seen_at": "2026-05-24T13:00:47.491904+00:00"
+        }
+      ],
+      "last_seen": "2026-05-24T13:00:47.491904+00:00"
+    },
+    "they": {
+      "word": "they",
+      "meaning": "他们",
+      "level": "basic",
+      "frequency": 11942,
+      "seen_count": 1,
+      "wrong_count": 0,
+      "correct_count": 1,
+      "mastery": 1.0,
+      "related_stories": [
+        {
+          "title": "悄悄靠近的告白",
+          "summary": "一个害羞的男生在校园里寻找机会向喜欢的女生表达心意，却意外发现她也在等他。",
+          "seen_at": "2026-05-24T13:00:47.491904+00:00"
+        }
+      ],
+      "last_seen": "2026-05-24T13:00:47.491904+00:00"
+    },
+    "you": {
+      "word": "you",
+      "meaning": "你",
+      "level": "basic",
+      "frequency": 10015,
+      "seen_count": 1,
+      "wrong_count": 0,
+      "correct_count": 1,
+      "mastery": 1.0,
+      "related_stories": [
+        {
+          "title": "悄悄靠近的告白",
+          "summary": "一个害羞的男生在校园里寻找机会向喜欢的女生表达心意，却意外发现她也在等他。",
+          "seen_at": "2026-05-24T13:00:47.491904+00:00"
+        }
+      ],
+      "last_seen": "2026-05-24T13:00:47.491904+00:00"
+    },
+    "with": {
+      "word": "with",
+      "meaning": "伴随",
+      "level": "basic",
+      "frequency": 9006,
+      "seen_count": 1,
+      "wrong_count": 0,
+      "correct_count": 1,
+      "mastery": 1.0,
+      "related_stories": [
+        {
+          "title": "悄悄靠近的告白",
+          "summary": "一个害羞的男生在校园里寻找机会向喜欢的女生表达心意，却意外发现她也在等他。",
+          "seen_at": "2026-05-24T13:00:47.491904+00:00"
+        }
+      ],
+      "last_seen": "2026-05-24T13:00:47.491904+00:00"
+    }
+  }
+}

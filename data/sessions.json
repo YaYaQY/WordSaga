@@ -1,0 +1,127 @@
+{
+  "version": 1,
+  "sessions": [
+    {
+      "created_at": "2026-05-24T13:00:47.494912+00:00",
+      "mode": "auto",
+      "level": "basic",
+      "words": [
+        "the",
+        "a",
+        "to",
+        "and",
+        "in",
+        "have",
+        "that",
+        "for",
+        "on",
+        "they",
+        "you",
+        "with"
+      ],
+      "story": {
+        "title": "悄悄靠近的告白",
+        "summary": "一个害羞的男生在校园里寻找机会向喜欢的女生表达心意，却意外发现她也在等他。"
+      },
+      "recall": {
+        "recalled_scene": "小杰要告白",
+        "answers": [
+          {
+            "word": "the",
+            "spelling_answer": "they",
+            "spelling_correct": false,
+            "meaning_answer": "这个，这些",
+            "meaning_correct": false
+          },
+          {
+            "word": "a",
+            "spelling_answer": "one",
+            "spelling_correct": false,
+            "meaning_answer": "一",
+            "meaning_correct": false
+          },
+          {
+            "word": "to",
+            "spelling_answer": "to",
+            "spelling_correct": true,
+            "meaning_answer": "目的 终点",
+            "meaning_correct": false
+          },
+          {
+            "word": "and",
+            "spelling_answer": "and",
+            "spelling_correct": true,
+            "meaning_answer": "和",
+            "meaning_correct": false
+          },
+          {
+            "word": "in",
+            "spelling_answer": "in",
+            "spelling_correct": true,
+            "meaning_answer": "在...内，范围",
+            "meaning_correct": false
+          },
+          {
+            "word": "have",
+            "spelling_answer": "and",
+            "spelling_correct": false,
+            "meaning_answer": "有",
+            "meaning_correct": true
+          },
+          {
+            "word": "that",
+            "spelling_answer": "that",
+            "spelling_correct": true,
+            "meaning_answer": "那",
+            "meaning_correct": true
+          },
+          {
+            "word": "for",
+            "spelling_answer": "a",
+            "spelling_correct": false,
+            "meaning_answer": "原因 对象",
+            "meaning_correct": true
+          },
+          {
+            "word": "on",
+            "spelling_answer": "on",
+            "spelling_correct": true,
+            "meaning_answer": "在..上",
+            "meaning_correct": true
+          },
+          {
+            "word": "they",
+            "spelling_answer": "they",
+            "spelling_correct": true,
+            "meaning_answer": "他们",
+            "meaning_correct": true
+          },
+          {
+            "word": "you",
+            "spelling_answer": "you",
+            "spelling_correct": true,
+            "meaning_answer": "你",
+            "meaning_correct": true
+          },
+          {
+            "word": "with",
+            "spelling_answer": "with",
+            "spelling_correct": true,
+            "meaning_answer": "伴随",
+            "meaning_correct": true
+          }
+        ],
+        "dialogue": [
+          {
+            "question": "小杰手里拿着什么？用目标词回答。",
+            "answer": "a"
+          },
+          {
+            "question": "晓雨有什么要对小杰说？用目标词回答。",
+            "answer": "？"
+          }
+        ]
+      }
+    }
+  ]
+}
