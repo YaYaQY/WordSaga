@@ -1,0 +1,258 @@
+{
+  "events": [
+    {
+      "id": "45cc82a6-ad1a-4ad3-bbe8-c2eedaff7f37",
+      "word": "certain",
+      "session_id": "aad4fe99-e759-417f-b1df-2d3324020a9e",
+      "event_type": "stage1_complete",
+      "stage": 1,
+      "result": "seen",
+      "quality": 0,
+      "detail": {},
+      "occurred_at": "2026-06-02T14:57:00.340154+00:00"
+    },
+    {
+      "id": "e24a31bf-74e6-478f-aee8-7e82f7130e6d",
+      "word": "ever",
+      "session_id": "aad4fe99-e759-417f-b1df-2d3324020a9e",
+      "event_type": "stage1_complete",
+      "stage": 1,
+      "result": "seen",
+      "quality": 0,
+      "detail": {},
+      "occurred_at": "2026-06-02T14:57:00.340154+00:00"
+    },
+    {
+      "id": "574a54a6-b38b-402b-8d99-a5397668aaf8",
+      "word": "success",
+      "session_id": "aad4fe99-e759-417f-b1df-2d3324020a9e",
+      "event_type": "stage1_complete",
+      "stage": 1,
+      "result": "seen",
+      "quality": 0,
+      "detail": {},
+      "occurred_at": "2026-06-02T14:57:00.340154+00:00"
+    },
+    {
+      "id": "b50f6a7a-a54d-4ed4-81bf-774a3472d5cd",
+      "word": "late",
+      "session_id": "aad4fe99-e759-417f-b1df-2d3324020a9e",
+      "event_type": "stage1_complete",
+      "stage": 1,
+      "result": "seen",
+      "quality": 0,
+      "detail": {},
+      "occurred_at": "2026-06-02T14:57:00.340154+00:00"
+    },
+    {
+      "id": "128ff307-bca3-47bf-95e8-fe2e560025a8",
+      "word": "true",
+      "session_id": "aad4fe99-e759-417f-b1df-2d3324020a9e",
+      "event_type": "stage1_complete",
+      "stage": 1,
+      "result": "seen",
+      "quality": 0,
+      "detail": {},
+      "occurred_at": "2026-06-02T14:57:00.340154+00:00"
+    },
+    {
+      "id": "1d32914a-b5bc-48ed-8347-9e38dc294579",
+      "word": "certain",
+      "session_id": "aad4fe99-e759-417f-b1df-2d3324020a9e",
+      "event_type": "stage_submit",
+      "stage": 2,
+      "result": "wrong",
+      "quality": 0,
+      "detail": {
+        "user_answer": "",
+        "correct_answer": "确定的",
+        "skipped": true,
+        "meaning_correct": false
+      },
+      "occurred_at": "2026-06-02T14:57:20.437123+00:00"
+    },
+    {
+      "id": "47520a95-c9fb-4a4a-be1f-928d4bf646e5",
+      "word": "ever",
+      "session_id": "aad4fe99-e759-417f-b1df-2d3324020a9e",
+      "event_type": "stage_submit",
+      "stage": 2,
+      "result": "wrong",
+      "quality": 0,
+      "detail": {
+        "user_answer": "",
+        "correct_answer": "从来",
+        "skipped": true,
+        "meaning_correct": false
+      },
+      "occurred_at": "2026-06-02T14:57:20.437123+00:00"
+    },
+    {
+      "id": "a42e3820-1b60-4567-87ec-ab1c7dd78ecb",
+      "word": "success",
+      "session_id": "aad4fe99-e759-417f-b1df-2d3324020a9e",
+      "event_type": "stage_submit",
+      "stage": 2,
+      "result": "wrong",
+      "quality": 0,
+      "detail": {
+        "user_answer": "",
+        "correct_answer": "成功",
+        "skipped": true,
+        "meaning_correct": false
+      },
+      "occurred_at": "2026-06-02T14:57:20.437123+00:00"
+    },
+    {
+      "id": "078c4e12-08c1-4571-8dcb-7a16c0a5c757",
+      "word": "late",
+      "session_id": "aad4fe99-e759-417f-b1df-2d3324020a9e",
+      "event_type": "stage_submit",
+      "stage": 2,
+      "result": "wrong",
+      "quality": 0,
+      "detail": {
+        "user_answer": "",
+        "correct_answer": "晚的",
+        "skipped": true,
+        "meaning_correct": false
+      },
+      "occurred_at": "2026-06-02T14:57:20.437123+00:00"
+    },
+    {
+      "id": "cb58a386-0c7f-4651-a4b3-bb2548d2e041",
+      "word": "true",
+      "session_id": "aad4fe99-e759-417f-b1df-2d3324020a9e",
+      "event_type": "stage_submit",
+      "stage": 2,
+      "result": "wrong",
+      "quality": 0,
+      "detail": {
+        "user_answer": "",
+        "correct_answer": "真实",
+        "skipped": true,
+        "meaning_correct": false
+      },
+      "occurred_at": "2026-06-02T14:57:20.437123+00:00"
+    },
+    {
+      "id": "ac2bac0f-8df2-4897-ba20-73382716372f",
+      "word": "name",
+      "session_id": "180eb578-0e18-44ea-9453-41a2a5c80f35",
+      "event_type": "stage1_complete",
+      "stage": 1,
+      "result": "seen",
+      "quality": 0,
+      "detail": {},
+      "occurred_at": "2026-06-02T15:04:09.264594+00:00"
+    },
+    {
+      "id": "408aace1-f62c-4c2a-8fe9-bf19adcc8aa5",
+      "word": "matter",
+      "session_id": "180eb578-0e18-44ea-9453-41a2a5c80f35",
+      "event_type": "stage1_complete",
+      "stage": 1,
+      "result": "seen",
+      "quality": 0,
+      "detail": {},
+      "occurred_at": "2026-06-02T15:04:09.264594+00:00"
+    },
+    {
+      "id": "2f26e2bb-3d96-418c-8725-2bdc594352cb",
+      "word": "stress",
+      "session_id": "180eb578-0e18-44ea-9453-41a2a5c80f35",
+      "event_type": "stage1_complete",
+      "stage": 1,
+      "result": "seen",
+      "quality": 0,
+      "detail": {},
+      "occurred_at": "2026-06-02T15:04:09.264594+00:00"
+    },
+    {
+      "id": "99dd4547-6680-4d9a-a58f-ab8f49f95025",
+      "word": "identify",
+      "session_id": "180eb578-0e18-44ea-9453-41a2a5c80f35",
+      "event_type": "stage1_complete",
+      "stage": 1,
+      "result": "seen",
+      "quality": 0,
+      "detail": {},
+      "occurred_at": "2026-06-02T15:04:09.264594+00:00"
+    },
+    {
+      "id": "01161874-c46f-4c3f-b64b-1d935e8bfb2b",
+      "word": "name",
+      "session_id": "180eb578-0e18-44ea-9453-41a2a5c80f35",
+      "event_type": "stage_submit",
+      "stage": 2,
+      "result": "correct",
+      "quality": 4,
+      "detail": {
+        "user_answer": "呼唤",
+        "correct_answer": "叩召",
+        "skipped": false,
+        "meaning_correct": true
+      },
+      "occurred_at": "2026-06-02T15:05:14.392073+00:00"
+    },
+    {
+      "id": "c7de2e64-2162-42fc-accf-6ff37216ee0c",
+      "word": "matter",
+      "session_id": "180eb578-0e18-44ea-9453-41a2a5c80f35",
+      "event_type": "stage_submit",
+      "stage": 2,
+      "result": "correct",
+      "quality": 4,
+      "detail": {
+        "user_answer": "事情",
+        "correct_answer": "事情、问题、重要",
+        "skipped": false,
+        "meaning_correct": true
+      },
+      "occurred_at": "2026-06-02T15:05:14.392073+00:00"
+    },
+    {
+      "id": "85933983-9462-4d7b-b913-f67a03aba90a",
+      "word": "stress",
+      "session_id": "180eb578-0e18-44ea-9453-41a2a5c80f35",
+      "event_type": "stage_submit",
+      "stage": 2,
+      "result": "correct",
+      "quality": 4,
+      "detail": {
+        "user_answer": "压力",
+        "correct_answer": "压力",
+        "skipped": false,
+        "meaning_correct": true
+      },
+      "occurred_at": "2026-06-02T15:05:14.392073+00:00"
+    },
+    {
+      "id": "6568e8dd-9984-442a-92de-fc5b20d2fc2e",
+      "word": "identify",
+      "session_id": "180eb578-0e18-44ea-9453-41a2a5c80f35",
+      "event_type": "stage_submit",
+      "stage": 2,
+      "result": "correct",
+      "quality": 4,
+      "detail": {
+        "user_answer": "识别",
+        "correct_answer": "识别、鉴定",
+        "skipped": false,
+        "meaning_correct": true
+      },
+      "occurred_at": "2026-06-02T15:05:14.392073+00:00"
+    },
+    {
+      "id": "7dbd942c-b920-4dec-97a2-369926035209",
+      "word": "certain",
+      "session_id": "180eb578-0e18-44ea-9453-41a2a5c80f35",
+      "event_type": "context_revisit",
+      "stage": 3,
+      "result": "seen",
+      "quality": 0,
+      "detail": {},
+      "occurred_at": "2026-06-02T15:06:11.512202+00:00"
+    }
+  ]
+}

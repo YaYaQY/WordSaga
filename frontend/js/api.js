@@ -121,4 +121,17 @@ export const api = {
       timeout: 180000,
     }),
   getWrongBook: () => request("/api/wrong-book"),
+  getReviewDue: (level = "basic", limit = 50) =>
+    request(`/api/vocabulary/review/due?level=${encodeURIComponent(level)}&limit=${limit}`),
+  getResumable: async () => {
+    const response = await fetch(`${API_BASE}/api/sessions/resumable`);
+    if (response.status === 404) {
+      return null;
+    }
+    const data = await response.json();
+    if (!response.ok) {
+      throw new Error(data.detail || `请求失败：${response.status}`);
+    }
+    return data;
+  },
 };

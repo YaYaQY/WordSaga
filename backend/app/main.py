@@ -6,7 +6,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
-from app.api import sessions, stages, vocabulary, wrong_book
+from app.api import memory, sessions, stages, vocabulary, wrong_book
 from app.deps import get_store
 from app.services.vocabulary_engine import VocabularyEngine
 
@@ -35,6 +35,7 @@ app.add_middleware(
 app.include_router(vocabulary.router)
 app.include_router(sessions.router)
 app.include_router(stages.router)
+app.include_router(memory.router)
 app.include_router(wrong_book.router)
 
 

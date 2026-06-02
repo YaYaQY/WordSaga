@@ -24,3 +24,13 @@ class SessionOut(BaseModel):
     word_count: int
     status: str
     words: list[SessionWordOut]
+
+
+class ResumableSessionOut(BaseModel):
+    id: str
+    mode: str
+    level: str
+    status: str
+    word_count: int
+    words: list[SessionWordOut]
+    story_title: str | None

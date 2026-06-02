@@ -332,6 +332,51 @@
       "correct_answer": "always",
       "error_type": "stage4",
       "created_at": "2026-05-25T14:50:32.488350+00:00"
+    },
+    {
+      "word": "include",
+      "session_id": "8db86d97-69d3-4497-9cd3-4349356fc122",
+      "stage": 3,
+      "user_answer": "",
+      "correct_answer": "include",
+      "error_type": "stage3",
+      "created_at": "2026-05-28T12:39:28.500928+00:00"
+    },
+    {
+      "word": "least",
+      "session_id": "8db86d97-69d3-4497-9cd3-4349356fc122",
+      "stage": 3,
+      "user_answer": "",
+      "correct_answer": "least",
+      "error_type": "stage3",
+      "created_at": "2026-05-28T12:39:28.500928+00:00"
+    },
+    {
+      "word": "face",
+      "session_id": "8db86d97-69d3-4497-9cd3-4349356fc122",
+      "stage": 3,
+      "user_answer": "",
+      "correct_answer": "face",
+      "error_type": "stage3",
+      "created_at": "2026-05-28T12:39:28.500928+00:00"
+    },
+    {
+      "word": "plan",
+      "session_id": "8db86d97-69d3-4497-9cd3-4349356fc122",
+      "stage": 3,
+      "user_answer": "",
+      "correct_answer": "plan",
+      "error_type": "stage3",
+      "created_at": "2026-05-28T12:39:28.500928+00:00"
+    },
+    {
+      "word": "consider",
+      "session_id": "8db86d97-69d3-4497-9cd3-4349356fc122",
+      "stage": 3,
+      "user_answer": "",
+      "correct_answer": "consider",
+      "error_type": "stage3",
+      "created_at": "2026-05-28T12:39:28.500928+00:00"
     }
   ]
 }

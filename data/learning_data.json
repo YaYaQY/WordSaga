@@ -3884,6 +3884,1793 @@
           ]
         }
       ]
+    },
+    "8db86d97-69d3-4497-9cd3-4349356fc122": {
+      "id": "8db86d97-69d3-4497-9cd3-4349356fc122",
+      "mode": "frequency",
+      "level": "basic",
+      "style": "霸总爱情",
+      "word_count": 5,
+      "status": "stage4",
+      "created_at": "2026-05-28T12:38:12.198078+00:00",
+      "words": [
+        {
+          "word": "include",
+          "source": "wrong",
+          "meaning": "包括"
+        },
+        {
+          "word": "least",
+          "source": "new",
+          "meaning": "最小的、最少的"
+        },
+        {
+          "word": "face",
+          "source": "new",
+          "meaning": "面对"
+        },
+        {
+          "word": "plan",
+          "source": "new",
+          "meaning": "计划"
+        },
+        {
+          "word": "consider",
+          "source": "new",
+          "meaning": "考虑"
+        }
+      ],
+      "story": {
+        "title": "意外的温柔",
+        "summary": "深夜，女主站在落地窗前计划离职，却收到冷面总裁要求她出席股东大会的消息。会议上，总裁宣布公司重组并坚持包括她，她本以为会被裁。散会后，总裁叫住她，称考虑了很久，她值得更好的位置，她在他眼中瞥见一闪而过的温柔。",
+        "world_context": {
+          "setting": "深夜的办公室与次日股东大会的会议室",
+          "characters": [
+            "她（女主）",
+            "冷面总裁（男主）"
+          ],
+          "last_event": "散会后，总裁叫住她，告诉她他考虑了很久，她值得更好的位置，她在他眼中看到一闪而过的温柔。"
+        },
+        "enrichment_status": "complete",
+        "chapters": [
+          {
+            "chapter_index": 1,
+            "title": "意外的温柔",
+            "annotated_story_zh": "深夜，她独自站在落地窗前，望着城市灯火，心中盘算着离职后的去向。手机震动，一条消息弹出：“明天股东大会，你需要出席（face）。”署名竟是那个冷面总裁。她皱眉，这个临时决定打乱了所有计划（plan）。会议室内，他坐在主位，目光扫过众人，最后落在她脸上：“公司重组，名单里必须包括（include）你。”她震惊，至少（least）她以为自己是会被裁掉的那一个。散会后，他叫住她：“我考虑了（consider）很久，你值得更好的位置。”她抬头，对上他眼底一闪而过的温柔。",
+            "full_story_en": "Late at night, she stood alone in front of the floor-to-ceiling window, looking at the city lights, planning her departure after resignation. Her phone vibrated, and a message popped up: \"Tomorrow's shareholders' meeting, you need to face it.\" The signature was that cold-faced CEO. She frowned; this sudden decision disrupted all her plans. In the meeting room, he sat in the main seat, his eyes sweeping over everyone, finally landing on her: \"The company is restructuring, and the list must include you.\" She was shocked; at least she thought she would be the one laid off. After the meeting, he called her over: \"I have considered for a long time, you deserve a better position.\" She looked up and caught a glimpse of tenderness flashing in his eyes.",
+            "occurrences": [
+              {
+                "word": "face",
+                "pos": "v.",
+                "meaning": "面对",
+                "sentence_en": "Tomorrow's shareholders' meeting, you need to face it.",
+                "sentence_zh": "明天股东大会，你需要出席。"
+              },
+              {
+                "word": "plan",
+                "pos": "n.",
+                "meaning": "计划",
+                "sentence_en": "She frowned; this sudden decision disrupted all her plans.",
+                "sentence_zh": "她皱眉，这个临时决定打乱了所有计划。"
+              },
+              {
+                "word": "include",
+                "pos": "v.",
+                "meaning": "包括",
+                "sentence_en": "The company is restructuring, and the list must include you.",
+                "sentence_zh": "公司重组，名单里必须包括你。"
+              },
+              {
+                "word": "least",
+                "pos": "adv.",
+                "meaning": "至少",
+                "sentence_en": "She was shocked; at least she thought she would be the one laid off.",
+                "sentence_zh": "她震惊，至少她以为自己是会被裁掉的那一个。"
+              },
+              {
+                "word": "consider",
+                "pos": "v.",
+                "meaning": "考虑",
+                "sentence_en": "I have considered for a long time, you deserve a better position.",
+                "sentence_zh": "我考虑了很久，你值得更好的位置。"
+              }
+            ],
+            "enriched": true,
+            "summary": "深夜，女主站在落地窗前计划离职，却收到冷面总裁要求她出席股东大会的消息。会议上，总裁宣布公司重组并坚持包括她，她本以为会被裁。散会后，总裁叫住她，称考虑了很久，她值得更好的位置，她在他眼中瞥见一闪而过的温柔。",
+            "full_story_zh": "深夜，她独自站在落地窗前，望着城市灯火，心中盘算着离职后的去向。手机震动，一条消息弹出：“明天股东大会，你需要出席。”署名竟是那个冷面总裁。她皱眉，这个临时决定打乱了所有计划。会议室内，他坐在主位，目光扫过众人，最后落在她脸上：“公司重组，名单里必须包括你。”她震惊，至少她以为自己是会被裁掉的那一个。散会后，他叫住她：“我考虑了很久，你值得更好的位置。”她抬头，对上他眼底一闪而过的温柔。",
+            "annotated_story_en": "Late at night, she stood alone in front of the floor-to-ceiling window, looking at the city lights, planning her departure after resignation. Her phone vibrated, and a message popped up: \"Tomorrow's shareholders' meeting, you need to face it.\" The signature was that cold-faced CEO. She frowned; this sudden decision disrupted all her plans. In the meeting room, he sat in the main seat, his eyes sweeping over everyone, finally landing on her: \"The company is restructuring, and the list must include you.\" She was shocked; at least she thought she would be the one laid off. After the meeting, he called her over: \"I have considered for a long time, you deserve a better position.\" She looked up and caught a glimpse of tenderness flashing in his eyes.",
+            "world_context": {
+              "setting": "深夜的办公室与次日股东大会的会议室",
+              "characters": [
+                "她（女主）",
+                "冷面总裁（男主）"
+              ],
+              "last_event": "散会后，总裁叫住她，告诉她他考虑了很久，她值得更好的位置，她在他眼中看到一闪而过的温柔。"
+            }
+          }
+        ]
+      },
+      "stage2_answers": [
+        {
+          "word": "include",
+          "meaning_answer": "包括",
+          "skipped": false
+        },
+        {
+          "word": "least",
+          "meaning_answer": "",
+          "skipped": false
+        },
+        {
+          "word": "face",
+          "meaning_answer": "",
+          "skipped": false
+        },
+        {
+          "word": "plan",
+          "meaning_answer": "",
+          "skipped": false
+        },
+        {
+          "word": "consider",
+          "meaning_answer": "",
+          "skipped": false
+        }
+      ],
+      "stage3_results": [
+        {
+          "word": "include",
+          "spelling_correct": false,
+          "meaning_correct": false,
+          "sentence_correct": true,
+          "errors": [
+            "拼写未填写",
+            "释义未填写"
+          ],
+          "suggestions": [
+            "请填写正确拼写：include",
+            "请填写正确释义：包括"
+          ]
+        },
+        {
+          "word": "least",
+          "spelling_correct": false,
+          "meaning_correct": false,
+          "sentence_correct": true,
+          "errors": [
+            "拼写未填写",
+            "释义未填写"
+          ],
+          "suggestions": [
+            "请填写正确拼写：least",
+            "请填写正确释义：至少"
+          ]
+        },
+        {
+          "word": "face",
+          "spelling_correct": false,
+          "meaning_correct": false,
+          "sentence_correct": true,
+          "errors": [
+            "拼写未填写",
+            "释义未填写"
+          ],
+          "suggestions": [
+            "请填写正确拼写：face",
+            "请填写正确释义：面对"
+          ]
+        },
+        {
+          "word": "plan",
+          "spelling_correct": false,
+          "meaning_correct": false,
+          "sentence_correct": true,
+          "errors": [
+            "拼写未填写",
+            "释义未填写"
+          ],
+          "suggestions": [
+            "请填写正确拼写：plan",
+            "请填写正确释义：计划"
+          ]
+        },
+        {
+          "word": "consider",
+          "spelling_correct": false,
+          "meaning_correct": false,
+          "sentence_correct": true,
+          "errors": [
+            "拼写未填写",
+            "释义未填写"
+          ],
+          "suggestions": [
+            "请填写正确拼写：consider",
+            "请填写正确释义：考虑"
+          ]
+        }
+      ]
+    },
+    "d08fb099-a7ac-4e0f-bc48-585bdfb75b28": {
+      "id": "d08fb099-a7ac-4e0f-bc48-585bdfb75b28",
+      "mode": "frequency",
+      "level": "basic",
+      "style": "喜欢的故事风格和故事主题",
+      "word_count": 100,
+      "status": "stage1",
+      "created_at": "2026-05-28T12:40:18.048594+00:00",
+      "words": [
+        {
+          "word": "include",
+          "source": "wrong",
+          "meaning": "包括"
+        },
+        {
+          "word": "move",
+          "source": "wrong",
+          "meaning": "移动"
+        },
+        {
+          "word": "create",
+          "source": "wrong",
+          "meaning": "创造"
+        },
+        {
+          "word": "never",
+          "source": "wrong",
+          "meaning": "从不"
+        },
+        {
+          "word": "rather",
+          "source": "wrong",
+          "meaning": "相当的"
+        },
+        {
+          "word": "century",
+          "source": "wrong",
+          "meaning": "世纪"
+        },
+        {
+          "word": "bad",
+          "source": "wrong",
+          "meaning": "坏的"
+        },
+        {
+          "word": "eat",
+          "source": "wrong",
+          "meaning": "吃"
+        },
+        {
+          "word": "always",
+          "source": "wrong",
+          "meaning": "总是"
+        },
+        {
+          "word": "industry",
+          "source": "new",
+          "meaning": "工业、行业"
+        },
+        {
+          "word": "themselves",
+          "source": "new",
+          "meaning": "他们自己、他们亲自"
+        },
+        {
+          "word": "process",
+          "source": "new",
+          "meaning": "过程、进程"
+        },
+        {
+          "word": "rate",
+          "source": "new",
+          "meaning": "比率"
+        },
+        {
+          "word": "fact",
+          "source": "new",
+          "meaning": "事实"
+        },
+        {
+          "word": "house",
+          "source": "new",
+          "meaning": "房子"
+        },
+        {
+          "word": "culture",
+          "source": "new",
+          "meaning": "文化"
+        },
+        {
+          "word": "power",
+          "source": "new",
+          "meaning": "力、功率"
+        },
+        {
+          "word": "share",
+          "source": "new",
+          "meaning": "分享"
+        },
+        {
+          "word": "area",
+          "source": "new",
+          "meaning": "地区、范围"
+        },
+        {
+          "word": "million",
+          "source": "new",
+          "meaning": "百万"
+        },
+        {
+          "word": "lot",
+          "source": "new",
+          "meaning": "很、许多"
+        },
+        {
+          "word": "sense",
+          "source": "new",
+          "meaning": "感觉"
+        },
+        {
+          "word": "lose",
+          "source": "new",
+          "meaning": "失去、失败"
+        },
+        {
+          "word": "against",
+          "source": "new",
+          "meaning": "相对、相反"
+        },
+        {
+          "word": "rise",
+          "source": "new",
+          "meaning": "上升"
+        },
+        {
+          "word": "energy",
+          "source": "new",
+          "meaning": "精力"
+        },
+        {
+          "word": "control",
+          "source": "new",
+          "meaning": "控制"
+        },
+        {
+          "word": "space",
+          "source": "new",
+          "meaning": "空间"
+        },
+        {
+          "word": "case",
+          "source": "new",
+          "meaning": "情况"
+        },
+        {
+          "word": "hold",
+          "source": "new",
+          "meaning": "握着、坚持"
+        },
+        {
+          "word": "possible",
+          "source": "new",
+          "meaning": "可能的"
+        },
+        {
+          "word": "animal",
+          "source": "new",
+          "meaning": "动物"
+        },
+        {
+          "word": "enough",
+          "source": "new",
+          "meaning": "足够"
+        },
+        {
+          "word": "value",
+          "source": "new",
+          "meaning": "价值"
+        },
+        {
+          "word": "role",
+          "source": "new",
+          "meaning": "角色"
+        },
+        {
+          "word": "week",
+          "source": "new",
+          "meaning": "周末"
+        },
+        {
+          "word": "individual",
+          "source": "new",
+          "meaning": "个人的、独特的"
+        },
+        {
+          "word": "hand",
+          "source": "new",
+          "meaning": "手"
+        },
+        {
+          "word": "open",
+          "source": "new",
+          "meaning": "打开"
+        },
+        {
+          "word": "ten",
+          "source": "new",
+          "meaning": "十"
+        },
+        {
+          "word": "term",
+          "source": "new",
+          "meaning": "条款、期限"
+        },
+        {
+          "word": "away",
+          "source": "new",
+          "meaning": "离开"
+        },
+        {
+          "word": "happen",
+          "source": "new",
+          "meaning": "发生"
+        },
+        {
+          "word": "fall",
+          "source": "new",
+          "meaning": "掉落"
+        },
+        {
+          "word": "art",
+          "source": "new",
+          "meaning": "艺术"
+        },
+        {
+          "word": "self",
+          "source": "new",
+          "meaning": "自我、自己"
+        },
+        {
+          "word": "drive",
+          "source": "new",
+          "meaning": "驾驶、驱使"
+        },
+        {
+          "word": "interest",
+          "source": "new",
+          "meaning": "兴趣"
+        },
+        {
+          "word": "issue",
+          "source": "new",
+          "meaning": "问题、期刊、发布"
+        },
+        {
+          "word": "produce",
+          "source": "new",
+          "meaning": "生产"
+        },
+        {
+          "word": "complete",
+          "source": "new",
+          "meaning": "完全地"
+        },
+        {
+          "word": "under",
+          "source": "new",
+          "meaning": "在…之下"
+        },
+        {
+          "word": "brain",
+          "source": "new",
+          "meaning": "大脑"
+        },
+        {
+          "word": "level",
+          "source": "new",
+          "meaning": "水平、等级"
+        },
+        {
+          "word": "able",
+          "source": "new",
+          "meaning": "有能力的"
+        },
+        {
+          "word": "run",
+          "source": "new",
+          "meaning": "跑步、运转"
+        },
+        {
+          "word": "past",
+          "source": "new",
+          "meaning": "过渡的"
+        },
+        {
+          "word": "win",
+          "source": "new",
+          "meaning": "赢"
+        },
+        {
+          "word": "present",
+          "source": "new",
+          "meaning": "呈现、提出、礼物、现在"
+        },
+        {
+          "word": "quality",
+          "source": "new",
+          "meaning": "质量"
+        },
+        {
+          "word": "difficult",
+          "source": "new",
+          "meaning": "困难的"
+        },
+        {
+          "word": "easy",
+          "source": "new",
+          "meaning": "容易的"
+        },
+        {
+          "word": "reduce",
+          "source": "new",
+          "meaning": "减少"
+        },
+        {
+          "word": "tend",
+          "source": "new",
+          "meaning": "趋向于、照料"
+        },
+        {
+          "word": "five",
+          "source": "new",
+          "meaning": "五"
+        },
+        {
+          "word": "expect",
+          "source": "new",
+          "meaning": "预料、期待"
+        },
+        {
+          "word": "order",
+          "source": "new",
+          "meaning": "订单、命令、顺序"
+        },
+        {
+          "word": "environment",
+          "source": "new",
+          "meaning": "环境、自然环境"
+        },
+        {
+          "word": "law",
+          "source": "new",
+          "meaning": "法律、法则"
+        },
+        {
+          "word": "paper",
+          "source": "new",
+          "meaning": "纸、试卷"
+        },
+        {
+          "word": "kid",
+          "source": "new",
+          "meaning": "孩子"
+        },
+        {
+          "word": "mind",
+          "source": "new",
+          "meaning": "思维、想法"
+        },
+        {
+          "word": "economy",
+          "source": "new",
+          "meaning": "经济"
+        },
+        {
+          "word": "percent",
+          "source": "new",
+          "meaning": "百分之的"
+        },
+        {
+          "word": "sleep",
+          "source": "new",
+          "meaning": "睡眠"
+        },
+        {
+          "word": "recent",
+          "source": "new",
+          "meaning": "近来的"
+        },
+        {
+          "word": "half",
+          "source": "new",
+          "meaning": "一半"
+        },
+        {
+          "word": "close",
+          "source": "new",
+          "meaning": "关闭、近"
+        },
+        {
+          "word": "attention",
+          "source": "new",
+          "meaning": "注意"
+        },
+        {
+          "word": "free",
+          "source": "new",
+          "meaning": "自由的"
+        },
+        {
+          "word": "poor",
+          "source": "new",
+          "meaning": "糟糕的"
+        },
+        {
+          "word": "body",
+          "source": "new",
+          "meaning": "身体"
+        },
+        {
+          "word": "measure",
+          "source": "new",
+          "meaning": "衡量、测量"
+        },
+        {
+          "word": "office",
+          "source": "new",
+          "meaning": "办公室"
+        },
+        {
+          "word": "travel",
+          "source": "new",
+          "meaning": "旅行"
+        },
+        {
+          "word": "major",
+          "source": "new",
+          "meaning": "主要的"
+        },
+        {
+          "word": "professor",
+          "source": "new",
+          "meaning": "教授"
+        },
+        {
+          "word": "remain",
+          "source": "new",
+          "meaning": "保持"
+        },
+        {
+          "word": "though",
+          "source": "new",
+          "meaning": "尽管"
+        },
+        {
+          "word": "next",
+          "source": "new",
+          "meaning": "下一个"
+        },
+        {
+          "word": "design",
+          "source": "new",
+          "meaning": "设计"
+        },
+        {
+          "word": "history",
+          "source": "new",
+          "meaning": "历史"
+        },
+        {
+          "word": "nation",
+          "source": "new",
+          "meaning": "国家"
+        },
+        {
+          "word": "real",
+          "source": "new",
+          "meaning": "真的"
+        },
+        {
+          "word": "almost",
+          "source": "new",
+          "meaning": "几乎"
+        },
+        {
+          "word": "customer",
+          "source": "new",
+          "meaning": "顾客"
+        },
+        {
+          "word": "subject",
+          "source": "new",
+          "meaning": "科目"
+        },
+        {
+          "word": "ago",
+          "source": "new",
+          "meaning": "以前"
+        },
+        {
+          "word": "focus",
+          "source": "new",
+          "meaning": "聚焦、焦点"
+        },
+        {
+          "word": "local",
+          "source": "new",
+          "meaning": "当地的"
+        }
+      ],
+      "story": {
+        "title": "远古核心",
+        "summary": "林远在地下控制室发现能源核心功率输出率急剧下降，分析过程中注意到核心代码包含远古文明语言片段，决定放弃午饭研究代码，启动数据解析进程以揭开真相。 林远在控制室中尝试打开数据空间，尽管外界反对，他仍坚持自己的判断。经过漫长周末和十次尝试，数据终于上升，涌现出大量古老符号，可能与某种动物有关。林远意识到这些符号的巨大研究价值，决心牢牢控制整个进程。 林远在符号迷宫中面对系统故障，通过解析古老协议、逃离危险、发现壁画艺术、反思自我、驱动求知欲、应对技术问题、生产稳定剂、沉浸工作、提升认知水平、最终成功呈现高质量修复方案。 林远在解读古老符号时感到困难，注意到环境异常并减少能耗。他倾向于相信符号隐藏自然法则，但思绪纷乱。最近睡眠不足，一半时间分析数据。系统弹出紧急订单要求关闭第三层能量通道，否则经济下降5%。他预料到连锁反应但别无选择，想起童年时在废旧图书馆发现的画有相似符号的纸张，最终发现关键模式。 林远发现控制台上符号的糟糕设计，能量路径错误。他忍受身体疲惫，精确测量波动，回想教授提及的尘封历史——某个主要国家在远古旅行中留下的能量法则。他聚焦当地符号变体，几乎触及逻辑，下一步设计逆向实验，但神秘顾客的档案显示该科目被刻意掩盖。林远决定继续深挖。",
+        "world_context": {
+          "setting": "控制室，控制台前，周围有闪烁的符号和能量波动设备。",
+          "characters": [
+            "林远"
+          ],
+          "last_event": "林远在上一章中注意到控制台上的符号异常闪烁，并开始调查其含义，发现能量路径可能存在错误。"
+        },
+        "enrichment_status": "complete",
+        "chapters": [
+          {
+            "chapter_index": 1,
+            "title": "远古核心",
+            "annotated_story_zh": "林远走进地下控制室，目光扫过那台运行了数个世纪（century）的能源核心。他小心地移动（move）到操作台前，指尖划过数据面板，发现功率（power）输出率（rate）正在急剧下降——这是一个坏（bad）消息。他从未（never）见过这种故障模式，但直觉告诉他，必须立刻创造（create）一个新的修复方案。然而，在分析过程中，他注意到了一个惊人的事实（fact）：核心代码中竟然包含（include）了来自远古文明的语言片段。那个文明的文化（culture）以无私分享（share）为根基，他们自己（themselves）建造了这座如同巨大房子（house）般的地下设施。整个地区（area）曾有数百万（million）居民依赖这种能源生活，但后来能源行业（industry）总是（always）将这些遗迹视为过时之物。林远宁愿（rather）放弃午饭去研究这些代码，也不愿去吃（eat）那冰冷的压缩食品。他启动数据解析进程（process），决心揭开真相。",
+            "full_story_en": "Lin Yuan walked into the underground control room, his eyes scanning the energy core that had been running for centuries. He carefully moved to the console, his fingertips gliding over the data panel, and discovered that the power output rate was dropping sharply—this was bad news. He had never seen this type of failure mode, but his intuition told him he must immediately create a new repair plan. However, during the analysis process, he noticed a startling fact: the core code actually included fragments of an ancient civilization's language. That civilization's culture was based on selfless sharing; they themselves built this underground facility that was like a giant house. The entire area once had millions of residents relying on this energy for their lives, but later the energy industry always regarded these relics as obsolete. Lin Yuan would rather give up lunch to study these codes than eat the cold compressed food. He started the data parsing process, determined to uncover the truth.",
+            "occurrences": [
+              {
+                "word": "include",
+                "pos": "v.",
+                "meaning": "包括",
+                "sentence_en": "the core code actually included fragments of an ancient civilization's language",
+                "sentence_zh": "核心代码中竟然包含了来自远古文明的语言片段"
+              },
+              {
+                "word": "move",
+                "pos": "v.",
+                "meaning": "移动",
+                "sentence_en": "He carefully moved to the console",
+                "sentence_zh": "他小心地移动到操作台前"
+              },
+              {
+                "word": "create",
+                "pos": "v.",
+                "meaning": "创造",
+                "sentence_en": "he must immediately create a new repair plan",
+                "sentence_zh": "必须立刻创造一个新的修复方案"
+              },
+              {
+                "word": "never",
+                "pos": "adv.",
+                "meaning": "从不",
+                "sentence_en": "He had never seen this type of failure mode",
+                "sentence_zh": "他从未见过这种故障模式"
+              },
+              {
+                "word": "rather",
+                "pos": "adv.",
+                "meaning": "相当的",
+                "sentence_en": "Lin Yuan would rather give up lunch to study these codes",
+                "sentence_zh": "林远宁愿放弃午饭去研究这些代码"
+              },
+              {
+                "word": "century",
+                "pos": "n.",
+                "meaning": "世纪",
+                "sentence_en": "the energy core that had been running for centuries",
+                "sentence_zh": "那台运行了数个世纪的能源核心"
+              },
+              {
+                "word": "bad",
+                "pos": "adj.",
+                "meaning": "坏的",
+                "sentence_en": "this was bad news",
+                "sentence_zh": "这是一个坏消息"
+              },
+              {
+                "word": "eat",
+                "pos": "v.",
+                "meaning": "吃",
+                "sentence_en": "than eat the cold compressed food",
+                "sentence_zh": "也不愿去吃那冰冷的压缩食品"
+              },
+              {
+                "word": "always",
+                "pos": "adv.",
+                "meaning": "总是",
+                "sentence_en": "the energy industry always regarded these relics as obsolete",
+                "sentence_zh": "能源行业总是将这些遗迹视为过时之物"
+              },
+              {
+                "word": "industry",
+                "pos": "n.",
+                "meaning": "工业、行业",
+                "sentence_en": "the energy industry always regarded these relics as obsolete",
+                "sentence_zh": "能源行业总是将这些遗迹视为过时之物"
+              },
+              {
+                "word": "themselves",
+                "pos": "pron.",
+                "meaning": "他们自己、他们亲自",
+                "sentence_en": "they themselves built this underground facility",
+                "sentence_zh": "他们自己建造了这座地下设施"
+              },
+              {
+                "word": "process",
+                "pos": "n.",
+                "meaning": "过程、进程",
+                "sentence_en": "He started the data parsing process",
+                "sentence_zh": "他启动数据解析进程"
+              },
+              {
+                "word": "rate",
+                "pos": "n.",
+                "meaning": "比率",
+                "sentence_en": "the power output rate was dropping sharply",
+                "sentence_zh": "功率输出率正在急剧下降"
+              },
+              {
+                "word": "fact",
+                "pos": "n.",
+                "meaning": "事实",
+                "sentence_en": "he noticed a startling fact",
+                "sentence_zh": "他注意到了一个惊人的事实"
+              },
+              {
+                "word": "house",
+                "pos": "n.",
+                "meaning": "房子",
+                "sentence_en": "this underground facility that was like a giant house",
+                "sentence_zh": "这座如同巨大房子般的地下设施"
+              },
+              {
+                "word": "culture",
+                "pos": "n.",
+                "meaning": "文化",
+                "sentence_en": "That civilization's culture was based on selfless sharing",
+                "sentence_zh": "那个文明的文化以无私分享为根基"
+              },
+              {
+                "word": "power",
+                "pos": "n.",
+                "meaning": "力、功率",
+                "sentence_en": "the power output rate was dropping sharply",
+                "sentence_zh": "功率输出率正在急剧下降"
+              },
+              {
+                "word": "share",
+                "pos": "v.",
+                "meaning": "分享",
+                "sentence_en": "selfless sharing",
+                "sentence_zh": "无私分享"
+              },
+              {
+                "word": "area",
+                "pos": "n.",
+                "meaning": "地区、范围",
+                "sentence_en": "The entire area once had millions of residents",
+                "sentence_zh": "整个地区曾有数百万居民"
+              },
+              {
+                "word": "million",
+                "pos": "num.",
+                "meaning": "百万",
+                "sentence_en": "millions of residents",
+                "sentence_zh": "数百万居民"
+              }
+            ],
+            "enriched": true,
+            "summary": "林远在地下控制室发现能源核心功率输出率急剧下降，分析过程中注意到核心代码包含远古文明语言片段，决定放弃午饭研究代码，启动数据解析进程以揭开真相。",
+            "full_story_zh": "林远走进地下控制室，目光扫过那台运行了数个世纪的能源核心。他小心地移动到操作台前，指尖划过数据面板，发现功率输出率正在急剧下降——这是一个坏消息。他从未见过这种故障模式，但直觉告诉他，必须立刻创造一个新的修复方案。然而，在分析过程中，他注意到了一个惊人的事实：核心代码中竟然包含了来自远古文明的语言片段。那个文明的文化以无私分享为根基，他们自己建造了这座如同巨大房子般的地下设施。整个地区曾有数百万居民依赖这种能源生活，但后来能源行业总是将这些遗迹视为过时之物。林远宁愿放弃午饭去研究这些代码，也不愿去吃那冰冷的压缩食品。他启动数据解析进程，决心揭开真相。",
+            "annotated_story_en": "Lin Yuan walked into the underground control room, his eyes scanning the energy core that had been running for centuries (century). He carefully moved (move) to the console, his fingertips gliding over the data panel, and discovered that the power (power) output rate (rate) was dropping sharply—this was bad (bad) news. He had never (never) seen this type of failure mode, but his intuition told him he must immediately create (create) a new repair plan. However, during the analysis process, he noticed a startling fact (fact): the core code actually included (include) fragments of an ancient civilization's language. That civilization's culture (culture) was based on selfless sharing (share); they themselves (themselves) built this underground facility that was like a giant house (house). The entire area (area) once had millions (million) of residents relying on this energy for their lives, but later the energy industry (industry) always (always) regarded these relics as obsolete. Lin Yuan would rather (rather) give up lunch to study these codes than eat (eat) the cold compressed food. He started the data parsing process (process), determined to uncover the truth.",
+            "world_context": {
+              "setting": "地下控制室，远古能源核心设施",
+              "characters": [
+                "林远"
+              ],
+              "last_event": "林远发现核心代码包含远古文明语言片段，启动数据解析进程以揭开真相。"
+            }
+          },
+          {
+            "chapter_index": 2,
+            "title": "解析的开端",
+            "annotated_story_zh": "林远坐在冷寂的控制室里，双手飞速敲击键盘。他需要打开（open）一个全新的数据空间（space），但首先得调用足够的（enough）能量（energy）。他用手（hand）调整参数，心中有种不祥的预感（sense）。这个案例（case）中，每个个体（individual）都扮演着关键角色（role），他绝不能失去（lose）方向。尽管外界有强烈的反对（against）声音，他仍坚持（hold）自己的判断。经过一个漫长的周末（week），在第十（ten）次尝试时，数据终于开始上升（rise）。很多（lot）古老符号涌现出来，似乎与某种动物（animal）有关。林远意识到这些符号可能具有巨大的研究价值（value）。一切似乎都变得可能（possible）。他必须牢牢控制（control）整个进程，以免功亏一篑。",
+            "full_story_en": "Lin Yuan sat in the cold and silent control room, his hands flying over the keyboard. He needed to open a brand new data space, but first he had to summon enough energy. He used his hand to adjust the parameters, feeling a sense of foreboding. In this case, every individual played a key role, and he must not lose his way. Despite strong voices against him, he held onto his own judgment. After a long week, on the tenth attempt, the data finally began to rise. A lot of ancient symbols emerged, seemingly related to some animal. Lin Yuan realized that these symbols might have great research value. Everything seemed possible. He had to firmly control the entire process to avoid failure.",
+            "occurrences": [
+              {
+                "word": "open",
+                "pos": "v.",
+                "meaning": "打开",
+                "sentence_en": "He needed to open a brand new data space, but first he had to summon enough energy.",
+                "sentence_zh": "他需要打开（open）一个全新的数据空间（space），但首先得调用足够的（enough）能量（energy）。"
+              },
+              {
+                "word": "space",
+                "pos": "n.",
+                "meaning": "空间",
+                "sentence_en": "He needed to open a brand new data space, but first he had to summon enough energy.",
+                "sentence_zh": "他需要打开（open）一个全新的数据空间（space），但首先得调用足够的（enough）能量（energy）。"
+              },
+              {
+                "word": "enough",
+                "pos": "adj.",
+                "meaning": "足够",
+                "sentence_en": "He needed to open a brand new data space, but first he had to summon enough energy.",
+                "sentence_zh": "他需要打开（open）一个全新的数据空间（space），但首先得调用足够的（enough）能量（energy）。"
+              },
+              {
+                "word": "energy",
+                "pos": "n.",
+                "meaning": "精力",
+                "sentence_en": "He needed to open a brand new data space, but first he had to summon enough energy.",
+                "sentence_zh": "他需要打开（open）一个全新的数据空间（space），但首先得调用足够的（enough）能量（energy）。"
+              },
+              {
+                "word": "hand",
+                "pos": "n.",
+                "meaning": "手",
+                "sentence_en": "He used his hand to adjust the parameters, feeling a sense of foreboding.",
+                "sentence_zh": "他用手（hand）调整参数，心中有种不祥的预感（sense）。"
+              },
+              {
+                "word": "sense",
+                "pos": "n.",
+                "meaning": "感觉",
+                "sentence_en": "He used his hand to adjust the parameters, feeling a sense of foreboding.",
+                "sentence_zh": "他用手（hand）调整参数，心中有种不祥的预感（sense）。"
+              },
+              {
+                "word": "case",
+                "pos": "n.",
+                "meaning": "情况",
+                "sentence_en": "In this case, every individual played a key role, and he must not lose his way.",
+                "sentence_zh": "这个案例（case）中，每个个体（individual）都扮演着关键角色（role），他绝不能失去（lose）方向。"
+              },
+              {
+                "word": "individual",
+                "pos": "n.",
+                "meaning": "个人的、独特的",
+                "sentence_en": "In this case, every individual played a key role, and he must not lose his way.",
+                "sentence_zh": "这个案例（case）中，每个个体（individual）都扮演着关键角色（role），他绝不能失去（lose）方向。"
+              },
+              {
+                "word": "role",
+                "pos": "n.",
+                "meaning": "角色",
+                "sentence_en": "In this case, every individual played a key role, and he must not lose his way.",
+                "sentence_zh": "这个案例（case）中，每个个体（individual）都扮演着关键角色（role），他绝不能失去（lose）方向。"
+              },
+              {
+                "word": "lose",
+                "pos": "v.",
+                "meaning": "失去、失败",
+                "sentence_en": "In this case, every individual played a key role, and he must not lose his way.",
+                "sentence_zh": "这个案例（case）中，每个个体（individual）都扮演着关键角色（role），他绝不能失去（lose）方向。"
+              },
+              {
+                "word": "against",
+                "pos": "prep.",
+                "meaning": "相对、相反",
+                "sentence_en": "Despite strong voices against him, he held onto his own judgment.",
+                "sentence_zh": "尽管外界有强烈的反对（against）声音，他仍坚持（hold）自己的判断。"
+              },
+              {
+                "word": "hold",
+                "pos": "v.",
+                "meaning": "握着、坚持",
+                "sentence_en": "Despite strong voices against him, he held onto his own judgment.",
+                "sentence_zh": "尽管外界有强烈的反对（against）声音，他仍坚持（hold）自己的判断。"
+              },
+              {
+                "word": "week",
+                "pos": "n.",
+                "meaning": "周末",
+                "sentence_en": "After a long week, on the tenth attempt, the data finally began to rise.",
+                "sentence_zh": "经过一个漫长的周末（week），在第十（ten）次尝试时，数据终于开始上升（rise）。"
+              },
+              {
+                "word": "ten",
+                "pos": "num.",
+                "meaning": "十",
+                "sentence_en": "After a long week, on the tenth attempt, the data finally began to rise.",
+                "sentence_zh": "经过一个漫长的周末（week），在第十（ten）次尝试时，数据终于开始上升（rise）。"
+              },
+              {
+                "word": "rise",
+                "pos": "v.",
+                "meaning": "上升",
+                "sentence_en": "After a long week, on the tenth attempt, the data finally began to rise.",
+                "sentence_zh": "经过一个漫长的周末（week），在第十（ten）次尝试时，数据终于开始上升（rise）。"
+              },
+              {
+                "word": "lot",
+                "pos": "n.",
+                "meaning": "很、许多",
+                "sentence_en": "A lot of ancient symbols emerged, seemingly related to some animal.",
+                "sentence_zh": "很多（lot）古老符号涌现出来，似乎与某种动物（animal）有关。"
+              },
+              {
+                "word": "animal",
+                "pos": "n.",
+                "meaning": "动物",
+                "sentence_en": "A lot of ancient symbols emerged, seemingly related to some animal.",
+                "sentence_zh": "很多（lot）古老符号涌现出来，似乎与某种动物（animal）有关。"
+              },
+              {
+                "word": "value",
+                "pos": "n.",
+                "meaning": "价值",
+                "sentence_en": "Lin Yuan realized that these symbols might have great research value.",
+                "sentence_zh": "林远意识到这些符号可能具有巨大的研究价值（value）。"
+              },
+              {
+                "word": "possible",
+                "pos": "adj.",
+                "meaning": "可能的",
+                "sentence_en": "Everything seemed possible.",
+                "sentence_zh": "一切似乎都变得可能（possible）。"
+              },
+              {
+                "word": "control",
+                "pos": "v.",
+                "meaning": "控制",
+                "sentence_en": "He had to firmly control the entire process to avoid failure.",
+                "sentence_zh": "他必须牢牢控制（control）整个进程，以免功亏一篑。"
+              }
+            ],
+            "enriched": true,
+            "summary": "林远在控制室中尝试打开数据空间，尽管外界反对，他仍坚持自己的判断。经过漫长周末和十次尝试，数据终于上升，涌现出大量古老符号，可能与某种动物有关。林远意识到这些符号的巨大研究价值，决心牢牢控制整个进程。",
+            "full_story_zh": "林远坐在冷寂的控制室里，双手飞速敲击键盘。他需要打开一个全新的数据空间，但首先得调用足够的能量。他用手调整参数，心中有种不祥的预感。这个案例中，每个个体都扮演着关键角色，他绝不能失去方向。尽管外界有强烈的反对声音，他仍坚持自己的判断。经过一个漫长的周末，在第十次尝试时，数据终于开始上升。很多古老符号涌现出来，似乎与某种动物有关。林远意识到这些符号可能具有巨大的研究价值。一切似乎都变得可能。他必须牢牢控制整个进程，以免功亏一篑。",
+            "annotated_story_en": "Lin Yuan sat in the cold and silent control room, his hands flying over the keyboard. He needed to open (打开) a brand new data space (空间), but first he had to summon enough (足够的) energy (精力). He used his hand (手) to adjust the parameters, feeling a sense (感觉) of foreboding. In this case (情况), every individual (个人的) played a key role (角色), and he must not lose (失去) his way. Despite strong voices against (相反) him, he held (坚持) onto his own judgment. After a long week (周末), on the tenth (十) attempt, the data finally began to rise (上升). A lot (许多) of ancient symbols emerged, seemingly related to some animal (动物). Lin Yuan realized that these symbols might have great research value (价值). Everything seemed possible (可能的). He had to firmly control (控制) the entire process to avoid failure.",
+            "world_context": {
+              "setting": "冷寂的控制室，未来科技实验室",
+              "characters": [
+                "林远"
+              ],
+              "last_event": "林远在第1章中发现了古老符号的线索，并决定打开数据空间以获取更多信息。"
+            }
+          },
+          {
+            "chapter_index": 3,
+            "title": "符号迷宫",
+            "annotated_story_zh": "林远盯着屏幕上的图案，意识到要获取深层权限必须遵守一个古老协议（term）。他必须尽快离开（away）这个密闭空间，否则未知危险即将发生（happen）。突然，一块面板从天花板掉落（fall），砸碎在地，露出下方的壁画——那是一种失传的符号艺术（art）。他深吸一口气，开始反思自我（self），被求知的渴望驱使（drive）着，内心燃起浓厚兴趣（interest）。然而系统突然报错，一个关键的技术问题（issue）出现了：需要紧急生产（produce）一种稳定剂。他完全（complete）沉浸在工作里，控制室位于城市地下（under）百米深处，他的大脑（brain）飞速运转，认知水平（level）在不断提升。现在他能够（able）让核心程序重新运行（run），并对比过去（past）的失败记录，发誓这次必须赢（win）。最终，他成功呈现（present）了一套高质量（quality）的修复方案。",
+            "full_story_en": "Lin Yuan stared at the pattern on the screen, realizing that to obtain deeper permissions he must obey an ancient protocol. He had to leave this confined space quickly, or an unknown danger would happen. Suddenly, a panel fell from the ceiling, shattering on the floor, revealing a mural below—a lost symbolic art. He took a deep breath, began to reflect on himself, driven by a thirst for knowledge, his heart burning with intense interest. However, the system suddenly reported an error: a critical technical issue emerged—an urgent need to produce a stabilizer. He was completely immersed in his work; the control room was located hundreds of meters under the city. His brain worked at high speed, his cognitive level continuously rising. Now he was able to make the core program run again, and he compared it with past failures, vowing this time he must win. Finally, he successfully presented a high-quality repair plan.",
+            "occurrences": [
+              {
+                "word": "term",
+                "pos": "n.",
+                "meaning": "条款、期限",
+                "sentence_en": "Lin Yuan stared at the pattern on the screen, realizing that to obtain deeper permissions he must obey an ancient protocol (term).",
+                "sentence_zh": "林远盯着屏幕上的图案，意识到要获取深层权限必须遵守一个古老协议（term）。"
+              },
+              {
+                "word": "away",
+                "pos": "adv.",
+                "meaning": "离开",
+                "sentence_en": "He had to leave (away) this confined space quickly, or an unknown danger would happen.",
+                "sentence_zh": "他必须尽快离开（away）这个密闭空间，否则未知危险即将发生。"
+              },
+              {
+                "word": "happen",
+                "pos": "v.",
+                "meaning": "发生",
+                "sentence_en": "He had to leave this confined space quickly, or an unknown danger would happen (happen).",
+                "sentence_zh": "他必须尽快离开这个密闭空间，否则未知危险即将发生（happen）。"
+              },
+              {
+                "word": "fall",
+                "pos": "v.",
+                "meaning": "掉落",
+                "sentence_en": "Suddenly, a panel fell (fall) from the ceiling, shattering on the floor, revealing a mural below—a lost symbolic art.",
+                "sentence_zh": "突然，一块面板从天花板掉落（fall），砸碎在地，露出下方的壁画——那是一种失传的符号艺术。"
+              },
+              {
+                "word": "art",
+                "pos": "n.",
+                "meaning": "艺术",
+                "sentence_en": "Suddenly, a panel fell from the ceiling, shattering on the floor, revealing a mural below—a lost symbolic art (art).",
+                "sentence_zh": "突然，一块面板从天花板掉落，砸碎在地，露出下方的壁画——那是一种失传的符号艺术（art）。"
+              },
+              {
+                "word": "self",
+                "pos": "n.",
+                "meaning": "自我、自己",
+                "sentence_en": "He took a deep breath, began to reflect on himself (self), driven by a thirst for knowledge.",
+                "sentence_zh": "他深吸一口气，开始反思自我（self），被求知的渴望驱使着。"
+              },
+              {
+                "word": "drive",
+                "pos": "v.",
+                "meaning": "驾驶、驱使",
+                "sentence_en": "He took a deep breath, began to reflect on himself, driven (drive) by a thirst for knowledge.",
+                "sentence_zh": "他深吸一口气，开始反思自我，被求知的渴望驱使（drive）着。"
+              },
+              {
+                "word": "interest",
+                "pos": "n.",
+                "meaning": "兴趣",
+                "sentence_en": "He took a deep breath, began to reflect on himself, driven by a thirst for knowledge, his heart burning with intense interest (interest).",
+                "sentence_zh": "他深吸一口气，开始反思自我，被求知的渴望驱使着，内心燃起浓厚兴趣（interest）。"
+              },
+              {
+                "word": "issue",
+                "pos": "n.",
+                "meaning": "问题、期刊、发布",
+                "sentence_en": "However, the system suddenly reported an error: a critical technical issue (issue) emerged—an urgent need to produce a stabilizer.",
+                "sentence_zh": "然而系统突然报错，一个关键的技术问题（issue）出现了：需要紧急生产一种稳定剂。"
+              },
+              {
+                "word": "produce",
+                "pos": "v.",
+                "meaning": "生产",
+                "sentence_en": "However, the system suddenly reported an error: a critical technical issue emerged—an urgent need to produce (produce) a stabilizer.",
+                "sentence_zh": "然而系统突然报错，一个关键的技术问题出现了：需要紧急生产（produce）一种稳定剂。"
+              },
+              {
+                "word": "complete",
+                "pos": "adv.",
+                "meaning": "完全地",
+                "sentence_en": "He was completely (complete) immersed in his work; the control room was located hundreds of meters under the city.",
+                "sentence_zh": "他完全（complete）沉浸在工作里，控制室位于城市地下百米深处。"
+              },
+              {
+                "word": "under",
+                "pos": "prep.",
+                "meaning": "在…之下",
+                "sentence_en": "He was completely immersed in his work; the control room was located hundreds of meters under (under) the city.",
+                "sentence_zh": "他完全沉浸在工作里，控制室位于城市地下（under）百米深处。"
+              },
+              {
+                "word": "brain",
+                "pos": "n.",
+                "meaning": "大脑",
+                "sentence_en": "His brain (brain) worked at high speed, his cognitive level continuously rising.",
+                "sentence_zh": "他的大脑（brain）飞速运转，认知水平在不断提升。"
+              },
+              {
+                "word": "level",
+                "pos": "n.",
+                "meaning": "水平、等级",
+                "sentence_en": "His brain worked at high speed, his cognitive level (level) continuously rising.",
+                "sentence_zh": "他的大脑飞速运转，认知水平（level）在不断提升。"
+              },
+              {
+                "word": "able",
+                "pos": "adj.",
+                "meaning": "有能力的",
+                "sentence_en": "Now he was able (able) to make the core program run again, and he compared it with past failures.",
+                "sentence_zh": "现在他能够（able）让核心程序重新运行，并对比过去的失败记录。"
+              },
+              {
+                "word": "run",
+                "pos": "v.",
+                "meaning": "跑步、运转",
+                "sentence_en": "Now he was able to make the core program run (run) again, and he compared it with past failures.",
+                "sentence_zh": "现在他能够让核心程序重新运行（run），并对比过去的失败记录。"
+              },
+              {
+                "word": "past",
+                "pos": "adj.",
+                "meaning": "过去的",
+                "sentence_en": "Now he was able to make the core program run again, and he compared it with past (past) failures, vowing this time he must win.",
+                "sentence_zh": "现在他能够让核心程序重新运行，并对比过去（past）的失败记录，发誓这次必须赢。"
+              },
+              {
+                "word": "win",
+                "pos": "v.",
+                "meaning": "赢",
+                "sentence_en": "Now he was able to make the core program run again, and he compared it with past failures, vowing this time he must win (win).",
+                "sentence_zh": "现在他能够让核心程序重新运行，并对比过去的失败记录，发誓这次必须赢（win）。"
+              },
+              {
+                "word": "present",
+                "pos": "v.",
+                "meaning": "呈现、提出、礼物、现在",
+                "sentence_en": "Finally, he successfully presented (present) a high-quality repair plan.",
+                "sentence_zh": "最终，他成功呈现（present）了一套高质量的修复方案。"
+              },
+              {
+                "word": "quality",
+                "pos": "n.",
+                "meaning": "质量",
+                "sentence_en": "Finally, he successfully presented a high-quality (quality) repair plan.",
+                "sentence_zh": "最终，他成功呈现了一套高质量（quality）的修复方案。"
+              }
+            ],
+            "enriched": true,
+            "summary": "林远在符号迷宫中面对系统故障，通过解析古老协议、逃离危险、发现壁画艺术、反思自我、驱动求知欲、应对技术问题、生产稳定剂、沉浸工作、提升认知水平、最终成功呈现高质量修复方案。",
+            "full_story_zh": "林远盯着屏幕上的图案，意识到要获取深层权限必须遵守一个古老协议。他必须尽快离开这个密闭空间，否则未知危险即将发生。突然，一块面板从天花板掉落，砸碎在地，露出下方的壁画——那是一种失传的符号艺术。他深吸一口气，开始反思自我，被求知的渴望驱使着，内心燃起浓厚兴趣。然而系统突然报错，一个关键的技术问题出现了：需要紧急生产一种稳定剂。他完全沉浸在工作里，控制室位于城市地下百米深处，他的大脑飞速运转，认知水平在不断提升。现在他能够让核心程序重新运行，并对比过去的失败记录，发誓这次必须赢。最终，他成功呈现了一套高质量的修复方案。",
+            "annotated_story_en": "Lin Yuan stared at the pattern on the screen, realizing that to obtain deeper permissions he must obey an ancient protocol (term). He had to leave (away) this confined space quickly, or an unknown danger would happen (happen). Suddenly, a panel fell (fall) from the ceiling, shattering on the floor, revealing a mural below—a lost symbolic art (art). He took a deep breath, began to reflect on himself (self), driven (drive) by a thirst for knowledge, his heart burning with intense interest (interest). However, the system suddenly reported an error: a critical technical issue (issue) emerged—an urgent need to produce (produce) a stabilizer. He was completely (complete) immersed in his work; the control room was located hundreds of meters under (under) the city. His brain (brain) worked at high speed, his cognitive level (level) continuously rising. Now he was able (able) to make the core program run (run) again, and he compared it with past (past) failures, vowing this time he must win (win). Finally, he successfully presented (present) a high-quality (quality) repair plan.",
+            "world_context": {
+              "setting": "地下控制室，符号迷宫实验室",
+              "characters": [
+                "林远"
+              ],
+              "last_event": "林远成功呈现出高质量的修复方案，系统暂时稳定。"
+            }
+          },
+          {
+            "chapter_index": 4,
+            "title": "符号的法则",
+            "annotated_story_zh": "林远盯着控制台上闪烁的古老符号，深感解读它们十分困难（difficult）。他注意到（attention）周围环境（environment）的异常参数，决定减少（reduce）能耗以稳定系统，但这并不容易（easy）。他倾向于（tend）相信这些符号隐藏着某种自然法则（law），但思绪纷乱，难以专注（mind）。最近（recent）他几乎没睡过整觉（sleep），一半（half）时间都在分析数据。此时系统弹出一个紧急订单（order），要求立即关闭（close）第三层能量通道，否则城市经济（economy）可能下降百分之（percent）五（five）。他预料（expect）到这会引发连锁反应，但别无选择。他想起小时候（kid）在废旧图书馆翻到的那张纸（paper），上面画着类似的符号——也许那里有自由（free）解读的线索。他立刻调出扫描件，终于发现了一个关键模式。",
+            "full_story_en": "Lin Yuan stared at the ancient symbols flickering on the console, and found them very difficult to interpret. He paid attention to the abnormal parameters in the surrounding environment and decided to reduce energy consumption to stabilize the system, but it was not easy. He tended to believe that these symbols hid some natural law, but his mind was tangled and hard to focus. Recently, he had not had a full sleep; half of his time was spent analyzing data. At this moment, the system popped up an emergency order, demanding to immediately close the third-layer energy channel, otherwise the city's economy might drop by five percent. He expected this would trigger a chain reaction, but had no choice. He remembered a piece of paper he had found in an abandoned library when he was a kid, on which similar symbols were drawn—perhaps there was a free clue to interpret. He immediately called up the scanned copy and finally discovered a key pattern.",
+            "occurrences": [
+              {
+                "word": "difficult",
+                "pos": "adj.",
+                "meaning": "困难的",
+                "sentence_en": "Lin Yuan stared at the ancient symbols flickering on the console, and found them very difficult (困难的) to interpret.",
+                "sentence_zh": "林远盯着控制台上闪烁的古老符号，深感解读它们十分困难（difficult）。"
+              },
+              {
+                "word": "easy",
+                "pos": "adj.",
+                "meaning": "容易的",
+                "sentence_en": "He paid attention (注意) to the abnormal parameters in the surrounding environment (环境) and decided to reduce (减少) energy consumption to stabilize the system, but it was not easy (容易的).",
+                "sentence_zh": "他注意到（attention）周围环境（environment）的异常参数，决定减少（reduce）能耗以稳定系统，但这并不容易（easy）。"
+              },
+              {
+                "word": "reduce",
+                "pos": "v.",
+                "meaning": "减少",
+                "sentence_en": "He paid attention (注意) to the abnormal parameters in the surrounding environment (环境) and decided to reduce (减少) energy consumption to stabilize the system, but it was not easy (容易的).",
+                "sentence_zh": "他注意到（attention）周围环境（environment）的异常参数，决定减少（reduce）能耗以稳定系统，但这并不容易（easy）。"
+              },
+              {
+                "word": "tend",
+                "pos": "v.",
+                "meaning": "趋向于",
+                "sentence_en": "He tended (趋向于) to believe that these symbols hid some natural law (法则), but his mind (思维) was tangled and hard to focus.",
+                "sentence_zh": "他倾向于（tend）相信这些符号隐藏着某种自然法则（law），但思绪纷乱，难以专注（mind）。"
+              },
+              {
+                "word": "five",
+                "pos": "num.",
+                "meaning": "五",
+                "sentence_en": "At this moment, the system popped up an emergency order (订单), demanding to immediately close (关闭) the third-layer energy channel, otherwise the city's economy (经济) might drop by five (五) percent (百分之).",
+                "sentence_zh": "此时系统弹出一个紧急订单（order），要求立即关闭（close）第三层能量通道，否则城市经济（economy）可能下降百分之（percent）五（five）。"
+              },
+              {
+                "word": "expect",
+                "pos": "v.",
+                "meaning": "预料",
+                "sentence_en": "He expected (预料) this would trigger a chain reaction, but had no choice.",
+                "sentence_zh": "他预料（expect）到这会引发连锁反应，但别无选择。"
+              },
+              {
+                "word": "order",
+                "pos": "n.",
+                "meaning": "订单",
+                "sentence_en": "At this moment, the system popped up an emergency order (订单), demanding to immediately close (关闭) the third-layer energy channel, otherwise the city's economy (经济) might drop by five (五) percent (百分之).",
+                "sentence_zh": "此时系统弹出一个紧急订单（order），要求立即关闭（close）第三层能量通道，否则城市经济（economy）可能下降百分之（percent）五（five）。"
+              },
+              {
+                "word": "environment",
+                "pos": "n.",
+                "meaning": "环境",
+                "sentence_en": "He paid attention (注意) to the abnormal parameters in the surrounding environment (环境) and decided to reduce (减少) energy consumption to stabilize the system, but it was not easy (容易的).",
+                "sentence_zh": "他注意到（attention）周围环境（environment）的异常参数，决定减少（reduce）能耗以稳定系统，但这并不容易（easy）。"
+              },
+              {
+                "word": "law",
+                "pos": "n.",
+                "meaning": "法则",
+                "sentence_en": "He tended (趋向于) to believe that these symbols hid some natural law (法则), but his mind (思维) was tangled and hard to focus.",
+                "sentence_zh": "他倾向于（tend）相信这些符号隐藏着某种自然法则（law），但思绪纷乱，难以专注（mind）。"
+              },
+              {
+                "word": "paper",
+                "pos": "n.",
+                "meaning": "纸",
+                "sentence_en": "He remembered a piece of paper (纸) he had found in an abandoned library when he was a kid (孩子), on which similar symbols were drawn—perhaps there was a free (自由的) clue to interpret.",
+                "sentence_zh": "他想起小时候（kid）在废旧图书馆翻到的那张纸（paper），上面画着类似的符号——也许那里有自由（free）解读的线索。"
+              },
+              {
+                "word": "kid",
+                "pos": "n.",
+                "meaning": "孩子",
+                "sentence_en": "He remembered a piece of paper (纸) he had found in an abandoned library when he was a kid (孩子), on which similar symbols were drawn—perhaps there was a free (自由的) clue to interpret.",
+                "sentence_zh": "他想起小时候（kid）在废旧图书馆翻到的那张纸（paper），上面画着类似的符号——也许那里有自由（free）解读的线索。"
+              },
+              {
+                "word": "mind",
+                "pos": "n.",
+                "meaning": "思维",
+                "sentence_en": "He tended (趋向于) to believe that these symbols hid some natural law (法则), but his mind (思维) was tangled and hard to focus.",
+                "sentence_zh": "他倾向于（tend）相信这些符号隐藏着某种自然法则（law），但思绪纷乱，难以专注（mind）。"
+              },
+              {
+                "word": "economy",
+                "pos": "n.",
+                "meaning": "经济",
+                "sentence_en": "At this moment, the system popped up an emergency order (订单), demanding to immediately close (关闭) the third-layer energy channel, otherwise the city's economy (经济) might drop by five (五) percent (百分之).",
+                "sentence_zh": "此时系统弹出一个紧急订单（order），要求立即关闭（close）第三层能量通道，否则城市经济（economy）可能下降百分之（percent）五（five）。"
+              },
+              {
+                "word": "percent",
+                "pos": "n.",
+                "meaning": "百分之",
+                "sentence_en": "At this moment, the system popped up an emergency order (订单), demanding to immediately close (关闭) the third-layer energy channel, otherwise the city's economy (经济) might drop by five (五) percent (百分之).",
+                "sentence_zh": "此时系统弹出一个紧急订单（order），要求立即关闭（close）第三层能量通道，否则城市经济（economy）可能下降百分之（percent）五（five）。"
+              },
+              {
+                "word": "sleep",
+                "pos": "n.",
+                "meaning": "睡眠",
+                "sentence_en": "Recently (近来的), he had not had a full sleep (睡眠); half (一半) of his time was spent analyzing data.",
+                "sentence_zh": "最近（recent）他几乎没睡过整觉（sleep），一半（half）时间都在分析数据。"
+              },
+              {
+                "word": "recent",
+                "pos": "adj.",
+                "meaning": "近来的",
+                "sentence_en": "Recently (近来的), he had not had a full sleep (睡眠); half (一半) of his time was spent analyzing data.",
+                "sentence_zh": "最近（recent）他几乎没睡过整觉（sleep），一半（half）时间都在分析数据。"
+              },
+              {
+                "word": "half",
+                "pos": "adj.",
+                "meaning": "一半",
+                "sentence_en": "Recently (近来的), he had not had a full sleep (睡眠); half (一半) of his time was spent analyzing data.",
+                "sentence_zh": "最近（recent）他几乎没睡过整觉（sleep），一半（half）时间都在分析数据。"
+              },
+              {
+                "word": "close",
+                "pos": "v.",
+                "meaning": "关闭",
+                "sentence_en": "At this moment, the system popped up an emergency order (订单), demanding to immediately close (关闭) the third-layer energy channel, otherwise the city's economy (经济) might drop by five (五) percent (百分之).",
+                "sentence_zh": "此时系统弹出一个紧急订单（order），要求立即关闭（close）第三层能量通道，否则城市经济（economy）可能下降百分之（percent）五（five）。"
+              },
+              {
+                "word": "attention",
+                "pos": "n.",
+                "meaning": "注意",
+                "sentence_en": "He paid attention (注意) to the abnormal parameters in the surrounding environment (环境) and decided to reduce (减少) energy consumption to stabilize the system, but it was not easy (容易的).",
+                "sentence_zh": "他注意到（attention）周围环境（environment）的异常参数，决定减少（reduce）能耗以稳定系统，但这并不容易（easy）。"
+              },
+              {
+                "word": "free",
+                "pos": "adj.",
+                "meaning": "自由的",
+                "sentence_en": "He remembered a piece of paper (纸) he had found in an abandoned library when he was a kid (孩子), on which similar symbols were drawn—perhaps there was a free (自由的) clue to interpret.",
+                "sentence_zh": "他想起小时候（kid）在废旧图书馆翻到的那张纸（paper），上面画着类似的符号——也许那里有自由（free）解读的线索。"
+              }
+            ],
+            "enriched": true,
+            "summary": "林远在解读古老符号时感到困难，注意到环境异常并减少能耗。他倾向于相信符号隐藏自然法则，但思绪纷乱。最近睡眠不足，一半时间分析数据。系统弹出紧急订单要求关闭第三层能量通道，否则经济下降5%。他预料到连锁反应但别无选择，想起童年时在废旧图书馆发现的画有相似符号的纸张，最终发现关键模式。",
+            "full_story_zh": "林远盯着控制台上闪烁的古老符号，深感解读它们十分困难。他注意到周围环境的异常参数，决定减少能耗以稳定系统，但这并不容易。他倾向于相信这些符号隐藏着某种自然法则，但思绪纷乱，难以专注。最近他几乎没睡过整觉，一半时间都在分析数据。此时系统弹出一个紧急订单，要求立即关闭第三层能量通道，否则城市经济可能下降百分之五。他预料到这会引发连锁反应，但别无选择。他想起小时候在废旧图书馆翻到的那张纸，上面画着类似的符号——也许那里有自由解读的线索。他立刻调出扫描件，终于发现了一个关键模式。",
+            "annotated_story_en": "Lin Yuan stared at the ancient symbols flickering on the console, and found them very difficult (困难的) to interpret. He paid attention (注意) to the abnormal parameters in the surrounding environment (环境) and decided to reduce (减少) energy consumption to stabilize the system, but it was not easy (容易的). He tended (趋向于) to believe that these symbols hid some natural law (法则), but his mind (思维) was tangled and hard to focus. Recently (近来的), he had not had a full sleep (睡眠); half (一半) of his time was spent analyzing data. At this moment, the system popped up an emergency order (订单), demanding to immediately close (关闭) the third-layer energy channel, otherwise the city's economy (经济) might drop by five (五) percent (百分之). He expected (预料) this would trigger a chain reaction, but had no choice. He remembered a piece of paper (纸) he had found in an abandoned library when he was a kid (孩子), on which similar symbols were drawn—perhaps there was a free (自由的) clue to interpret. He immediately called up the scanned copy and finally discovered a key pattern.",
+            "world_context": {
+              "setting": "一个未来科幻城市，中心控制室布满闪烁的古老符号和能量通道，城市经济系统高度依赖能量网络。",
+              "characters": [
+                "林远（主角，数据分析师）"
+              ],
+              "last_event": "系统弹出紧急订单，要求立即关闭第三层能量通道，否则城市经济可能下降5%。林远预料到连锁反应但别无选择，同时回忆起童年时在废旧图书馆发现的画有相似符号的纸张。"
+            }
+          },
+          {
+            "chapter_index": 5,
+            "title": "符号的余波",
+            "annotated_story_zh": "林远盯着控制台上闪烁的符号，发现了一个糟糕的（poor）设计——能量流动路径被错误地绘制。他必须精确测量（measure）每一处波动，但震动让他的身体（body）发出抗议。尽管（though）疲惫，他仍保持（remain）专注，回想起以前（ago）在办公室（office）里，一位老教授（professor）曾提到过一段尘封的历史（history），关于某个主要（major）国家（nation）在远古旅行（travel）中留下的能量法则。他聚焦（focus）于当地（local）的符号变体，几乎（almost）就要触及其中的逻辑。下一个（next）步骤是设计（design）一个逆向实验，但真正的（real）挑战在于——一位神秘顾客（customer）提供的档案显示，这个科目（subject）曾被刻意掩盖。林远握紧拳头，决定继续深挖。",
+            "full_story_en": "Lin Yuan stared at the flickering symbols on the console and discovered a poor design—the energy flow path was incorrectly drawn. He had to precisely measure every fluctuation, but the vibrations made his body protest. Though exhausted, he remained focused, recalling that ago in the office, an old professor had mentioned a sealed history about a major nation's energy laws left during an ancient travel. He focused on the local symbol variations and almost touched the logic within them. The next step was to design a reverse experiment, but the real challenge was that a mysterious customer's provided archives showed this subject had been deliberately concealed. Lin Yuan clenched his fists and decided to dig deeper.",
+            "occurrences": [
+              {
+                "word": "poor",
+                "pos": "adj.",
+                "meaning": "糟糕的",
+                "sentence_en": "Lin Yuan stared at the flickering symbols on the console and discovered a poor design—the energy flow path was incorrectly drawn.",
+                "sentence_zh": "林远盯着控制台上闪烁的符号，发现了一个糟糕的设计——能量流动路径被错误地绘制。"
+              },
+              {
+                "word": "design",
+                "pos": "n.",
+                "meaning": "设计",
+                "sentence_en": "Lin Yuan stared at the flickering symbols on the console and discovered a poor design—the energy flow path was incorrectly drawn.",
+                "sentence_zh": "林远盯着控制台上闪烁的符号，发现了一个糟糕的设计——能量流动路径被错误地绘制。"
+              },
+              {
+                "word": "measure",
+                "pos": "v.",
+                "meaning": "衡量、测量",
+                "sentence_en": "He had to precisely measure every fluctuation, but the vibrations made his body protest.",
+                "sentence_zh": "他必须精确测量每一处波动，但震动让他的身体发出抗议。"
+              },
+              {
+                "word": "body",
+                "pos": "n.",
+                "meaning": "身体",
+                "sentence_en": "He had to precisely measure every fluctuation, but the vibrations made his body protest.",
+                "sentence_zh": "他必须精确测量每一处波动，但震动让他的身体发出抗议。"
+              },
+              {
+                "word": "though",
+                "pos": "conj.",
+                "meaning": "尽管",
+                "sentence_en": "Though exhausted, he remained focused, recalling that ago in the office, an old professor had mentioned a sealed history about a major nation's energy laws left during an ancient travel.",
+                "sentence_zh": "尽管疲惫，他仍保持专注，回想起以前在办公室里，一位老教授曾提到过一段尘封的历史，关于某个主要国家在远古旅行中留下的能量法则。"
+              },
+              {
+                "word": "remain",
+                "pos": "v.",
+                "meaning": "保持",
+                "sentence_en": "Though exhausted, he remained focused, recalling that ago in the office, an old professor had mentioned a sealed history about a major nation's energy laws left during an ancient travel.",
+                "sentence_zh": "尽管疲惫，他仍保持专注，回想起以前在办公室里，一位老教授曾提到过一段尘封的历史，关于某个主要国家在远古旅行中留下的能量法则。"
+              },
+              {
+                "word": "ago",
+                "pos": "adv.",
+                "meaning": "以前",
+                "sentence_en": "Though exhausted, he remained focused, recalling that ago in the office, an old professor had mentioned a sealed history about a major nation's energy laws left during an ancient travel.",
+                "sentence_zh": "尽管疲惫，他仍保持专注，回想起以前在办公室里，一位老教授曾提到过一段尘封的历史，关于某个主要国家在远古旅行中留下的能量法则。"
+              },
+              {
+                "word": "office",
+                "pos": "n.",
+                "meaning": "办公室",
+                "sentence_en": "Though exhausted, he remained focused, recalling that ago in the office, an old professor had mentioned a sealed history about a major nation's energy laws left during an ancient travel.",
+                "sentence_zh": "尽管疲惫，他仍保持专注，回想起以前在办公室里，一位老教授曾提到过一段尘封的历史，关于某个主要国家在远古旅行中留下的能量法则。"
+              },
+              {
+                "word": "professor",
+                "pos": "n.",
+                "meaning": "教授",
+                "sentence_en": "Though exhausted, he remained focused, recalling that ago in the office, an old professor had mentioned a sealed history about a major nation's energy laws left during an ancient travel.",
+                "sentence_zh": "尽管疲惫，他仍保持专注，回想起以前在办公室里，一位老教授曾提到过一段尘封的历史，关于某个主要国家在远古旅行中留下的能量法则。"
+              },
+              {
+                "word": "history",
+                "pos": "n.",
+                "meaning": "历史",
+                "sentence_en": "Though exhausted, he remained focused, recalling that ago in the office, an old professor had mentioned a sealed history about a major nation's energy laws left during an ancient travel.",
+                "sentence_zh": "尽管疲惫，他仍保持专注，回想起以前在办公室里，一位老教授曾提到过一段尘封的历史，关于某个主要国家在远古旅行中留下的能量法则。"
+              },
+              {
+                "word": "major",
+                "pos": "adj.",
+                "meaning": "主要的",
+                "sentence_en": "Though exhausted, he remained focused, recalling that ago in the office, an old professor had mentioned a sealed history about a major nation's energy laws left during an ancient travel.",
+                "sentence_zh": "尽管疲惫，他仍保持专注，回想起以前在办公室里，一位老教授曾提到过一段尘封的历史，关于某个主要国家在远古旅行中留下的能量法则。"
+              },
+              {
+                "word": "nation",
+                "pos": "n.",
+                "meaning": "国家",
+                "sentence_en": "Though exhausted, he remained focused, recalling that ago in the office, an old professor had mentioned a sealed history about a major nation's energy laws left during an ancient travel.",
+                "sentence_zh": "尽管疲惫，他仍保持专注，回想起以前在办公室里，一位老教授曾提到过一段尘封的历史，关于某个主要国家在远古旅行中留下的能量法则。"
+              },
+              {
+                "word": "travel",
+                "pos": "n.",
+                "meaning": "旅行",
+                "sentence_en": "Though exhausted, he remained focused, recalling that ago in the office, an old professor had mentioned a sealed history about a major nation's energy laws left during an ancient travel.",
+                "sentence_zh": "尽管疲惫，他仍保持专注，回想起以前在办公室里，一位老教授曾提到过一段尘封的历史，关于某个主要国家在远古旅行中留下的能量法则。"
+              },
+              {
+                "word": "focus",
+                "pos": "v.",
+                "meaning": "聚焦、焦点",
+                "sentence_en": "He focused on the local symbol variations and almost touched the logic within them.",
+                "sentence_zh": "他聚焦于当地的符号变体，几乎就要触及其中的逻辑。"
+              },
+              {
+                "word": "local",
+                "pos": "adj.",
+                "meaning": "当地的",
+                "sentence_en": "He focused on the local symbol variations and almost touched the logic within them.",
+                "sentence_zh": "他聚焦于当地的符号变体，几乎就要触及其中的逻辑。"
+              },
+              {
+                "word": "almost",
+                "pos": "adv.",
+                "meaning": "几乎",
+                "sentence_en": "He focused on the local symbol variations and almost touched the logic within them.",
+                "sentence_zh": "他聚焦于当地的符号变体，几乎就要触及其中的逻辑。"
+              },
+              {
+                "word": "next",
+                "pos": "adj.",
+                "meaning": "下一个",
+                "sentence_en": "The next step was to design a reverse experiment, but the real challenge was that a mysterious customer's provided archives showed this subject had been deliberately concealed.",
+                "sentence_zh": "下一个步骤是设计一个逆向实验，但真正的挑战在于——一位神秘顾客提供的档案显示，这个科目曾被刻意掩盖。"
+              },
+              {
+                "word": "real",
+                "pos": "adj.",
+                "meaning": "真的",
+                "sentence_en": "The next step was to design a reverse experiment, but the real challenge was that a mysterious customer's provided archives showed this subject had been deliberately concealed.",
+                "sentence_zh": "下一个步骤是设计一个逆向实验，但真正的挑战在于——一位神秘顾客提供的档案显示，这个科目曾被刻意掩盖。"
+              },
+              {
+                "word": "customer",
+                "pos": "n.",
+                "meaning": "顾客",
+                "sentence_en": "The next step was to design a reverse experiment, but the real challenge was that a mysterious customer's provided archives showed this subject had been deliberately concealed.",
+                "sentence_zh": "下一个步骤是设计一个逆向实验，但真正的挑战在于——一位神秘顾客提供的档案显示，这个科目曾被刻意掩盖。"
+              },
+              {
+                "word": "subject",
+                "pos": "n.",
+                "meaning": "科目",
+                "sentence_en": "The next step was to design a reverse experiment, but the real challenge was that a mysterious customer's provided archives showed this subject had been deliberately concealed.",
+                "sentence_zh": "下一个步骤是设计一个逆向实验，但真正的挑战在于——一位神秘顾客提供的档案显示，这个科目曾被刻意掩盖。"
+              }
+            ],
+            "enriched": true,
+            "summary": "林远发现控制台上符号的糟糕设计，能量路径错误。他忍受身体疲惫，精确测量波动，回想教授提及的尘封历史——某个主要国家在远古旅行中留下的能量法则。他聚焦当地符号变体，几乎触及逻辑，下一步设计逆向实验，但神秘顾客的档案显示该科目被刻意掩盖。林远决定继续深挖。",
+            "full_story_zh": "林远盯着控制台上闪烁的符号，发现了一个糟糕的设计——能量流动路径被错误地绘制。他必须精确测量每一处波动，但震动让他的身体发出抗议。尽管疲惫，他仍保持专注，回想起以前在办公室里，一位老教授曾提到过一段尘封的历史，关于某个主要国家在远古旅行中留下的能量法则。他聚焦于当地的符号变体，几乎就要触及其中的逻辑。下一个步骤是设计一个逆向实验，但真正的挑战在于——一位神秘顾客提供的档案显示，这个科目曾被刻意掩盖。林远握紧拳头，决定继续深挖。",
+            "annotated_story_en": "Lin Yuan stared at the flickering symbols on the console and discovered a poor (adj. 糟糕的) design (n. 设计)—the energy flow path was incorrectly drawn. He had to precisely measure (v. 衡量、测量) every fluctuation, but the vibrations made his body (n. 身体) protest. Though (conj. 尽管) exhausted, he remained (v. 保持) focused, recalling that ago (adv. 以前) in the office (n. 办公室), an old professor (n. 教授) had mentioned a sealed history (n. 历史) about a major (adj. 主要的) nation (n. 国家)'s energy laws left during an ancient travel (n. 旅行). He focused (v. 聚焦、焦点) on the local (adj. 当地的) symbol variations and almost (adv. 几乎) touched the logic within them. The next (adj. 下一个) step was to design a reverse experiment, but the real (adj. 真的) challenge was that a mysterious customer (n. 顾客)'s provided archives showed this subject (n. 科目) had been deliberately concealed. Lin Yuan clenched his fists and decided to dig deeper.",
+            "world_context": {
+              "setting": "控制室，控制台前，周围有闪烁的符号和能量波动设备。",
+              "characters": [
+                "林远"
+              ],
+              "last_event": "林远在上一章中注意到控制台上的符号异常闪烁，并开始调查其含义，发现能量路径可能存在错误。"
+            }
+          }
+        ]
+      }
+    },
+    "aad4fe99-e759-417f-b1df-2d3324020a9e": {
+      "id": "aad4fe99-e759-417f-b1df-2d3324020a9e",
+      "mode": "frequency",
+      "level": "basic",
+      "style": "日常治愈系原创小故事",
+      "word_count": 5,
+      "status": "stage3",
+      "created_at": "2026-06-02T14:56:44.247473+00:00",
+      "words": [
+        {
+          "word": "certain",
+          "source": "new",
+          "meaning": "确定的"
+        },
+        {
+          "word": "ever",
+          "source": "new",
+          "meaning": "从来"
+        },
+        {
+          "word": "success",
+          "source": "new",
+          "meaning": "成功"
+        },
+        {
+          "word": "late",
+          "source": "new",
+          "meaning": "晚的"
+        },
+        {
+          "word": "true",
+          "source": "new",
+          "meaning": "真实"
+        }
+      ],
+      "story": {
+        "title": "迟来的花开",
+        "summary": "老李每天清晨照料窗台上的花，尽管不确定能否开花，但从未放弃。深秋的早晨，花终于开放，虽然晚但真实美丽，老李感到这是微小的成功。",
+        "world_context": {
+          "setting": "老李的窗前，深秋早晨",
+          "characters": [
+            "老李"
+          ],
+          "last_event": "无"
+        },
+        "enrichment_status": "complete",
+        "chapters": [
+          {
+            "chapter_index": 1,
+            "title": "迟来的花开",
+            "annotated_story_zh": "老李每天清晨都会给窗台上的花盆浇水，他从未（ever）放弃过照料这些植物。尽管他并不确定（certain）它们是否还能绽放。直到某个深秋的早晨，一抹淡紫悄然探出头来——花开得有些晚（late），但那是真实（true）的美丽。他站在窗前，觉得这便是他人生中微小而确定的成功（success）。",
+            "full_story_en": "Every morning, Lao Li would water the flower pots on the windowsill, and he never ever gave up caring for these plants. Although he was not certain whether they would bloom again. Until one early morning in late autumn, a touch of pale purple quietly peeked out — the flowers bloomed a bit late, but it was true beauty. He stood by the window, feeling that this was a small but certain success in his life.",
+            "occurrences": [
+              {
+                "word": "ever",
+                "pos": "adv.",
+                "meaning": "从来",
+                "sentence_en": "Every morning, Lao Li would water the flower pots on the windowsill, and he never ever gave up caring for these plants.",
+                "sentence_zh": "老李每天清晨都会给窗台上的花盆浇水，他从未放弃过照料这些植物。"
+              },
+              {
+                "word": "certain",
+                "pos": "adj.",
+                "meaning": "确定的",
+                "sentence_en": "Although he was not certain whether they would bloom again.",
+                "sentence_zh": "尽管他并不确定它们是否还能绽放。"
+              },
+              {
+                "word": "late",
+                "pos": "adv.",
+                "meaning": "晚的",
+                "sentence_en": "Until one early morning in late autumn, a touch of pale purple quietly peeked out — the flowers bloomed a bit late, but it was true beauty.",
+                "sentence_zh": "直到某个深秋的早晨，一抹淡紫悄然探出头来——花开得有些晚，但那是真实的美丽。"
+              },
+              {
+                "word": "true",
+                "pos": "adj.",
+                "meaning": "真实",
+                "sentence_en": "Until one early morning in late autumn, a touch of pale purple quietly peeked out — the flowers bloomed a bit late, but it was true beauty.",
+                "sentence_zh": "直到某个深秋的早晨，一抹淡紫悄然探出头来——花开得有些晚，但那是真实的美丽。"
+              },
+              {
+                "word": "success",
+                "pos": "n.",
+                "meaning": "成功",
+                "sentence_en": "He stood by the window, feeling that this was a small but certain success in his life.",
+                "sentence_zh": "他站在窗前，觉得这便是他人生中微小而确定的成功。"
+              }
+            ],
+            "enriched": true,
+            "summary": "老李每天清晨照料窗台上的花，尽管不确定能否开花，但从未放弃。深秋的早晨，花终于开放，虽然晚但真实美丽，老李感到这是微小的成功。",
+            "full_story_zh": "老李每天清晨都会给窗台上的花盆浇水，他从未放弃过照料这些植物。尽管他并不确定它们是否还能绽放。直到某个深秋的早晨，一抹淡紫悄然探出头来——花开得有些晚，但那是真实的美丽。他站在窗前，觉得这便是他人生中微小而确定的成功。",
+            "annotated_story_en": "Every morning, Lao Li would water the flower pots on the windowsill, and he never ever (ever) gave up caring for these plants. Although he was not certain (certain) whether they would bloom again. Until one early morning in late autumn, a touch of pale purple quietly peeked out — the flowers bloomed a bit late (late), but it was true (true) beauty. He stood by the window, feeling that this was a small but certain success (success) in his life.",
+            "world_context": {
+              "setting": "老李的窗前，深秋早晨",
+              "characters": [
+                "老李"
+              ],
+              "last_event": "无"
+            }
+          }
+        ]
+      },
+      "stage2_answers": [
+        {
+          "word": "certain",
+          "meaning_answer": "",
+          "skipped": true
+        },
+        {
+          "word": "ever",
+          "meaning_answer": "",
+          "skipped": true
+        },
+        {
+          "word": "success",
+          "meaning_answer": "",
+          "skipped": true
+        },
+        {
+          "word": "late",
+          "meaning_answer": "",
+          "skipped": true
+        },
+        {
+          "word": "true",
+          "meaning_answer": "",
+          "skipped": true
+        }
+      ]
+    },
+    "180eb578-0e18-44ea-9453-41a2a5c80f35": {
+      "id": "180eb578-0e18-44ea-9453-41a2a5c80f35",
+      "mode": "frequency",
+      "level": "basic",
+      "style": "日常治愈系原创小故事",
+      "word_count": 5,
+      "status": "stage3",
+      "created_at": "2026-06-02T15:01:43.934109+00:00",
+      "words": [
+        {
+          "word": "certain",
+          "source": "review",
+          "meaning": "确定的"
+        },
+        {
+          "word": "name",
+          "source": "new",
+          "meaning": "叩召"
+        },
+        {
+          "word": "matter",
+          "source": "new",
+          "meaning": "事情、问题、重要"
+        },
+        {
+          "word": "stress",
+          "source": "new",
+          "meaning": "压力"
+        },
+        {
+          "word": "identify",
+          "source": "new",
+          "meaning": "识别、鉴定"
+        }
+      ],
+      "story": {
+        "title": "治愈的早晨",
+        "summary": "小月在花店发现绿萝叶子发黄，感到压力，通过仔细观察识别出浇水过多的问题，确定原因后轻声呼唤绿萝的名字，调整浇水频率后觉得这只是小事，最终绿萝恢复生机，小月安心微笑。",
+        "world_context": {
+          "setting": "花店，清晨阳光洒入",
+          "characters": [
+            "小月"
+          ],
+          "last_event": "小月调整浇水后，绿萝恢复生机，她安心微笑"
+        },
+        "enrichment_status": "complete",
+        "chapters": [
+          {
+            "chapter_index": 1,
+            "title": "治愈的早晨",
+            "annotated_story_zh": "清晨，小月推开花店的门，阳光斜斜地洒进来。她看到角落那盆绿萝的叶子有些发黄，心里悄悄涌起一丝压力（stress）。她蹲下来，仔细查看叶片和土壤，想尽快识别（identify）问题所在。原来是浇水太勤了，根部有些闷湿。找到原因后，她心里终于变得确定（certain），便轻轻抚过叶片，低声呼唤（name）它：“小绿，没事了。”调整了浇水频率后，她站起身，觉得这小小的困扰根本不算什么大事（matter）。几天后，绿萝重新舒展鲜嫩的绿叶，小月站在晨光里，嘴角浮起安心的微笑。",
+            "full_story_en": "Early in the morning, Xiaoyue pushed open the door of the flower shop, and sunlight slanted in. She noticed the leaves of the pothos in the corner were turning yellow, and a trace of stress quietly surged in her heart. She crouched down to carefully examine the leaves and soil, wanting to quickly identify the problem. It turned out that she had been watering too frequently, causing the roots to be damp and stuffy. After finding the cause, her heart finally became certain. She gently stroked the leaves and softly named it, \"Little Green, it's okay.\" After adjusting the watering frequency, she stood up, feeling that this small trouble was not a big matter. A few days later, the pothos spread fresh green leaves again. Xiaoyue stood in the morning light, a relieved smile on her lips.",
+            "occurrences": [
+              {
+                "word": "stress",
+                "pos": "n.",
+                "meaning": "压力",
+                "sentence_en": "She noticed the leaves of the pothos in the corner were turning yellow, and a trace of stress quietly surged in her heart.",
+                "sentence_zh": "她看到角落那盆绿萝的叶子有些发黄，心里悄悄涌起一丝压力。"
+              },
+              {
+                "word": "identify",
+                "pos": "v.",
+                "meaning": "识别",
+                "sentence_en": "She crouched down to carefully examine the leaves and soil, wanting to quickly identify the problem.",
+                "sentence_zh": "她蹲下来，仔细查看叶片和土壤，想尽快识别问题所在。"
+              },
+              {
+                "word": "certain",
+                "pos": "adj.",
+                "meaning": "确定的",
+                "sentence_en": "After finding the cause, her heart finally became certain.",
+                "sentence_zh": "找到原因后，她心里终于变得确定。"
+              },
+              {
+                "word": "name",
+                "pos": "v.",
+                "meaning": "叩召",
+                "sentence_en": "She gently stroked the leaves and softly named it, \"Little Green, it's okay.\"",
+                "sentence_zh": "她轻轻抚过叶片，低声呼唤它：“小绿，没事了。”"
+              },
+              {
+                "word": "matter",
+                "pos": "n.",
+                "meaning": "事情",
+                "sentence_en": "After adjusting the watering frequency, she stood up, feeling that this small trouble was not a big matter.",
+                "sentence_zh": "调整了浇水频率后，她站起身，觉得这小小的困扰根本不算什么大事。"
+              }
+            ],
+            "enriched": true,
+            "summary": "小月在花店发现绿萝叶子发黄，感到压力，通过仔细观察识别出浇水过多的问题，确定原因后轻声呼唤绿萝的名字，调整浇水频率后觉得这只是小事，最终绿萝恢复生机，小月安心微笑。",
+            "full_story_zh": "清晨，小月推开花店的门，阳光斜斜地洒进来。她看到角落那盆绿萝的叶子有些发黄，心里悄悄涌起一丝压力。她蹲下来，仔细查看叶片和土壤，想尽快识别问题所在。原来是浇水太勤了，根部有些闷湿。找到原因后，她心里终于变得确定，便轻轻抚过叶片，低声呼唤它：“小绿，没事了。”调整了浇水频率后，她站起身，觉得这小小的困扰根本不算什么大事。几天后，绿萝重新舒展鲜嫩的绿叶，小月站在晨光里，嘴角浮起安心的微笑。",
+            "annotated_story_en": "Early in the morning, Xiaoyue pushed open the door of the flower shop, and sunlight slanted in. She noticed the leaves of the pothos in the corner were turning yellow, and a trace of stress (压力) quietly surged in her heart. She crouched down to carefully examine the leaves and soil, wanting to quickly identify (识别) the problem. It turned out that she had been watering too frequently, causing the roots to be damp and stuffy. After finding the cause, her heart finally became certain (确定的). She gently stroked the leaves and softly named (叩召) it, \"Little Green, it's okay.\" After adjusting the watering frequency, she stood up, feeling that this small trouble was not a big matter (事情). A few days later, the pothos spread fresh green leaves again. Xiaoyue stood in the morning light, a relieved smile on her lips.",
+            "world_context": {
+              "setting": "花店，清晨阳光洒入",
+              "characters": [
+                "小月"
+              ],
+              "last_event": "小月调整浇水后，绿萝恢复生机，她安心微笑"
+            }
+          }
+        ]
+      },
+      "stage2_answers": [
+        {
+          "word": "certain",
+          "meaning_answer": "确定",
+          "skipped": false
+        },
+        {
+          "word": "name",
+          "meaning_answer": "呼唤",
+          "skipped": false
+        },
+        {
+          "word": "matter",
+          "meaning_answer": "事情",
+          "skipped": false
+        },
+        {
+          "word": "stress",
+          "meaning_answer": "压力",
+          "skipped": false
+        },
+        {
+          "word": "identify",
+          "meaning_answer": "识别",
+          "skipped": false
+        }
+      ]
     }
   }
 }

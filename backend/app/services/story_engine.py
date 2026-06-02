@@ -1,9 +1,10 @@
 import json
 import logging
 import threading
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass
 
-from app.config import CHAPTER_WORD_SIZE
+from app.config import ENRICH_MAX_WORKERS, resolve_chapter_word_size
 from app.schemas.story import StoryChapterOut, StoryPackageOut, WordOccurrence
 from app.schemas.vocabulary import SelectedWord
 from app.services.ai_client import chat_completion, iter_chat_completion, parse_json_response
@@ -36,9 +37,10 @@ class StoryEngine:
         self.store = store
 
     def _split_words(self, words: list[SelectedWord]) -> list[list[SelectedWord]]:
+        chunk_size = resolve_chapter_word_size(len(words))
         chunks: list[list[SelectedWord]] = []
-        for index in range(0, len(words), CHAPTER_WORD_SIZE):
-            chunks.append(words[index : index + CHAPTER_WORD_SIZE])
+        for index in range(0, len(words), chunk_size):
+            chunks.append(words[index : index + chunk_size])
         return chunks
 
     def _word_payload(self, words: list[SelectedWord]) -> list[dict]:
@@ -268,6 +270,32 @@ class StoryEngine:
         self.start_enrichment_background(session_id)
         yield {"type": "done", "session_id": session_id}
 
+    def _enrich_single_chapter(
+        self,
+        session: dict,
+        index: int,
+        chunk: list[SelectedWord],
+        chapter_row: dict,
+    ) -> tuple[int, dict]:
+        prompt = self._build_enrich_prompt(
+            chunk,
+            session["style"],
+            index,
+            chapter_row["title"],
+            chapter_row["annotated_story_zh"],
+        )
+        raw = chat_completion(STORY_ENRICH_SYSTEM, prompt, stream=False)
+        enriched = self._parse_enrichment(raw)
+        return index, {
+            "summary": enriched.summary,
+            "full_story_en": enriched.full_story_en,
+            "full_story_zh": enriched.full_story_zh,
+            "annotated_story_en": enriched.annotated_story_en,
+            "occurrences": enriched.occurrences,
+            "world_context": enriched.world_context,
+            "enriched": True,
+        }
+
     def enrich_story(self, session_id: str):
         session = self.store.get_session(session_id)
         story = session.get("story")
@@ -295,52 +323,62 @@ class StoryEngine:
                 for row in selected_words
             ]
         )
-        summary_parts: list[str] = []
-        world_context = story.get("world_context") or {}
-
+        pending: list[tuple[int, list[SelectedWord], dict]] = []
         for index, (chunk, chapter_row) in enumerate(zip(chunks, story["chapters"]), start=1):
             if chapter_row.get("enriched"):
-                summary_parts.append(chapter_row.get("summary") or "")
-                world_context = chapter_row.get("world_context") or world_context
                 continue
+            pending.append((index, chunk, chapter_row))
 
-            logger.info("补全第 %s/%s 章结构化数据", index, len(chunks))
-            prompt = self._build_enrich_prompt(
-                chunk,
-                session["style"],
-                index,
-                chapter_row["title"],
-                chapter_row["annotated_story_zh"],
-            )
-            raw = chat_completion(STORY_ENRICH_SYSTEM, prompt, stream=False)
-            enriched = self._parse_enrichment(raw)
-            summary_parts.append(enriched.summary)
-            world_context = enriched.world_context
-            chapter_row.update(
-                {
-                    "summary": enriched.summary,
-                    "full_story_en": enriched.full_story_en,
-                    "full_story_zh": enriched.full_story_zh,
-                    "annotated_story_en": enriched.annotated_story_en,
-                    "occurrences": enriched.occurrences,
-                    "world_context": enriched.world_context,
-                    "enriched": True,
+        enriched_by_index: dict[int, dict] = {}
+        if pending:
+            with ThreadPoolExecutor(max_workers=ENRICH_MAX_WORKERS) as executor:
+                futures = {
+                    executor.submit(
+                        self._enrich_single_chapter,
+                        session,
+                        index,
+                        chunk,
+                        chapter_row,
+                    ): index
+                    for index, chunk, chapter_row in pending
                 }
-            )
-            story = self.store.get_session(session_id)["story"]
-            story["chapters"] = story["chapters"][:]
-            story["chapters"][index - 1] = chapter_row
-            story["summary"] = " ".join(part for part in summary_parts if part)
-            story["world_context"] = world_context
-            self.store.update_session(session_id, {"story": story})
+                for future in as_completed(futures):
+                    index, enriched_data = future.result()
+                    enriched_by_index[index] = enriched_data
+                    logger.info("补全第 %s/%s 章结构化数据", index, len(chunks))
 
         story = self.store.get_session(session_id)["story"]
+        summary_parts: list[str] = []
+        world_context = story.get("world_context") or {}
+        for index, chapter_row in enumerate(story["chapters"], start=1):
+            if index in enriched_by_index:
+                chapter_row.update(enriched_by_index[index])
+            if chapter_row.get("summary"):
+                summary_parts.append(chapter_row["summary"])
+            if chapter_row.get("world_context"):
+                world_context = chapter_row["world_context"]
+
+        story["chapters"] = story["chapters"][:]
+        story["summary"] = " ".join(part for part in summary_parts if part)
+        story["world_context"] = world_context
         story["enrichment_status"] = "complete"
-        story["summary"] = " ".join(
-            chapter.get("summary") or "" for chapter in story["chapters"] if chapter.get("summary")
-        )
         self.store.update_session(session_id, {"story": story})
         logger.info("补全完成 session=%s", session_id)
+
+    def get_enrichment_status(self, session_id: str) -> dict:
+        session = self.store.get_session(session_id)
+        story = session.get("story")
+        if story is None:
+            raise RuntimeError(f"Session 尚未生成剧情：{session_id}")
+        chapters = story.get("chapters") or []
+        enriched_count = sum(1 for chapter in chapters if chapter.get("enriched"))
+        return {
+            "session_id": session_id,
+            "status": story.get("enrichment_status"),
+            "review_mode": bool(story.get("review_mode")),
+            "chapter_total": len(chapters),
+            "chapter_enriched": enriched_count,
+        }
 
     def start_enrichment_background(self, session_id: str):
         thread = threading.Thread(
@@ -351,21 +389,15 @@ class StoryEngine:
         thread.start()
 
     def _enrich_story_safe(self, session_id: str):
-        try:
-            self.enrich_story(session_id)
-        except Exception:
-            logger.exception("后台补全失败 session=%s", session_id)
-            session = self.store.get_session(session_id)
-            story = session.get("story")
-            if story is not None:
-                story["enrichment_status"] = "failed"
-                self.store.update_session(session_id, {"story": story})
+        self.enrich_story(session_id)
 
     def ensure_enriched(self, session_id: str):
         session = self.store.get_session(session_id)
         story = session.get("story")
         if story is None:
             raise RuntimeError("请先生成剧情")
+        if story.get("review_mode"):
+            return
         if story.get("enrichment_status") != "complete":
             self.enrich_story(session_id)
 

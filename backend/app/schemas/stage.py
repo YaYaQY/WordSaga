@@ -33,6 +33,10 @@ class WordCard(BaseModel):
     sentence_en: str
     sentence_en_highlighted: str
     sentence_zh: str
+    next_review_at: str | None
+    incomplete_due_at: str | None
+    mastery: float
+    is_leech: bool
 
 
 class Stage3Out(BaseModel):
@@ -83,10 +87,21 @@ class Stage4SubmitRequest(BaseModel):
     answers: list[Stage4Answer]
 
 
+class WordSessionSummary(BaseModel):
+    word: str
+    session_correct: bool
+    next_review_at: str | None
+    interval_days: int
+    mastery: float
+    is_leech: bool
+    same_day_sm2_blocked: bool
+
+
 class Stage4SubmitResponse(BaseModel):
     session_id: str
     status: str
     results: list[GradeResult]
+    word_summaries: list[WordSessionSummary]
 
 
 class WrongRecordOut(BaseModel):

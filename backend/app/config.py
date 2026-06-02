@@ -9,7 +9,15 @@ DB_PATH = DATA_DIR / "wordsaga.db"
 VOCAB_JSON_PATH = DATA_DIR / "cet_full_list.json"
 ENV_PATH = ROOT_DIR / ".env"
 
-CHAPTER_WORD_SIZE = 20
+ENRICH_MAX_WORKERS = 3
+
+
+def resolve_chapter_word_size(word_count: int) -> int:
+    if word_count <= 10:
+        return word_count
+    if word_count <= 30:
+        return (word_count + 1) // 2
+    return 20
 
 
 def load_env():

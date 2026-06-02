@@ -5,8 +5,8 @@ from fastapi import APIRouter, Depends, HTTPException
 from fastapi.responses import StreamingResponse
 
 from app.deps import get_store
-from app.schemas.session import CreateSessionRequest, SessionOut
-from app.schemas.story import StoryPackageOut
+from app.schemas.session import CreateSessionRequest, ResumableSessionOut, SessionOut
+from app.schemas.story import StoryEnrichmentOut, StoryPackageOut
 from app.services.session_service import SessionService
 from app.services.story_engine import StoryEngine
 from app.storage.protocol import Store
@@ -28,6 +28,15 @@ def create_session(payload: CreateSessionRequest, store: Store = Depends(get_sto
         return service.create_session(payload)
     except RuntimeError as error:
         raise HTTPException(status_code=400, detail=str(error)) from error
+
+
+@router.get("/resumable", response_model=ResumableSessionOut)
+def get_resumable_session(store: Store = Depends(get_store)):
+    service = SessionService(store)
+    result = service.get_resumable()
+    if result is None:
+        raise HTTPException(status_code=404, detail="没有可续学的 session")
+    return result
 
 
 @router.get("/{session_id}", response_model=SessionOut)
@@ -78,5 +87,14 @@ def get_story(session_id: str, store: Store = Depends(get_store)):
     engine = StoryEngine(store)
     try:
         return engine.get_story_package(session_id)
+    except RuntimeError as error:
+        raise HTTPException(status_code=404, detail=str(error)) from error
+
+
+@router.get("/{session_id}/story/enrichment", response_model=StoryEnrichmentOut)
+def get_story_enrichment(session_id: str, store: Store = Depends(get_store)):
+    engine = StoryEngine(store)
+    try:
+        return engine.get_enrichment_status(session_id)
     except RuntimeError as error:
         raise HTTPException(status_code=404, detail=str(error)) from error

@@ -5,8 +5,8 @@ from typing import Any
 from app.config import DATA_DIR
 
 SETTINGS_PATH = DATA_DIR / "settings.json"
-WORD_PROGRESS_PATH = DATA_DIR / "word_progress.json"
-WRONG_RECORDS_PATH = DATA_DIR / "wrong_records.json"
+WORD_MEMORY_PATH = DATA_DIR / "word_memory.json"
+WORD_EVENTS_PATH = DATA_DIR / "word_events.json"
 LEARNING_DATA_PATH = DATA_DIR / "learning_data.json"
 
 
@@ -32,19 +32,21 @@ class LocalStore:
     def set_last_rank(self, rank: int):
         self._write(SETTINGS_PATH, {"last_learned_rank": rank})
 
-    def get_word_progress(self) -> dict[str, dict]:
-        data = self._read(WORD_PROGRESS_PATH, {"words": {}})
+    def get_word_memory(self) -> dict[str, dict]:
+        data = self._read(WORD_MEMORY_PATH, {"words": {}})
         return data["words"]
 
-    def save_word_progress(self, words: dict[str, dict]):
-        self._write(WORD_PROGRESS_PATH, {"words": words})
+    def save_word_memory(self, words: dict[str, dict]):
+        self._write(WORD_MEMORY_PATH, {"words": words})
 
-    def get_wrong_records(self) -> list[dict]:
-        data = self._read(WRONG_RECORDS_PATH, {"records": []})
-        return data["records"]
+    def get_word_events(self) -> list[dict]:
+        data = self._read(WORD_EVENTS_PATH, {"events": []})
+        return data["events"]
 
-    def save_wrong_records(self, records: list[dict]):
-        self._write(WRONG_RECORDS_PATH, {"records": records})
+    def append_word_events(self, events: list[dict]):
+        existing = self.get_word_events()
+        existing.extend(events)
+        self._write(WORD_EVENTS_PATH, {"events": existing})
 
     def get_sessions(self) -> dict[str, dict]:
         data = self._read(LEARNING_DATA_PATH, {"sessions": {}})

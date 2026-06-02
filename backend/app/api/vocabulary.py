@@ -1,7 +1,14 @@
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Query
 
 from app.deps import get_store
-from app.schemas.vocabulary import FrequencySelectRequest, ManualSelectRequest, SelectWordsResponse
+from app.schemas.vocabulary import (
+    DueWordOut,
+    FrequencySelectRequest,
+    ManualSelectRequest,
+    ReviewDueResponse,
+    SelectWordsResponse,
+    WordMemoryBrief,
+)
 from app.services.vocabulary_engine import VocabularyEngine
 from app.storage.protocol import Store
 
@@ -12,6 +19,32 @@ router = APIRouter(prefix="/api/vocabulary", tags=["vocabulary"])
 def vocabulary_count(store: Store = Depends(get_store)):
     engine = VocabularyEngine(store)
     return {"count": engine.vocabulary_count(), "source": "cet_full_list.json"}
+
+
+@router.get("/review/due", response_model=ReviewDueResponse)
+def list_due_words(
+    level: str = Query(default="basic"),
+    limit: int = Query(default=50, ge=1, le=300),
+    store: Store = Depends(get_store),
+):
+    engine = VocabularyEngine(store)
+    rows = engine.list_due_words(level=level, limit=limit)
+    words = [
+        DueWordOut(
+            word=row["word"],
+            rank=row["rank"],
+            frequency=row["frequency"],
+            level=row["level"],
+            meaning=row["meaning"],
+            memory=WordMemoryBrief(**row["memory"]),
+        )
+        for row in rows
+    ]
+    return ReviewDueResponse(
+        level=level,
+        due_count=engine.count_due_words(level=level),
+        words=words,
+    )
 
 
 @router.post("/select/frequency", response_model=SelectWordsResponse)

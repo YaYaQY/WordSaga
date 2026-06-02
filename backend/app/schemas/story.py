@@ -22,3 +22,11 @@ class StoryPackageOut(BaseModel):
     summary: str
     world_context: dict
     chapters: list[StoryChapterOut]
+
+
+class StoryEnrichmentOut(BaseModel):
+    session_id: str
+    status: str | None
+    review_mode: bool
+    chapter_total: int
+    chapter_enriched: int

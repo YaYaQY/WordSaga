@@ -3,6 +3,7 @@ import json
 from app.services.ai_client import chat_completion, parse_json_response
 
 GRADE_SYSTEM = "你只输出严格 JSON，用于 WordSaga 学习批改。"
+MEANING_GRADE_SYSTEM = "你只输出严格 JSON，用于 WordSaga 释义批改。"
 
 
 class GradingService:
@@ -63,4 +64,43 @@ class GradingService:
             if item is None:
                 raise RuntimeError(f"AI 批改结果缺少单词：{word}")
             graded.append(self._normalize_result(item, word))
+        return graded
+
+    def grade_meaning_batch(self, payloads: list[dict]) -> list[dict]:
+        if not payloads:
+            return []
+
+        prompt = (
+            "批改用户的英文单词释义回忆，一次处理全部单词。\n"
+            "要求：\n"
+            "1. 只判断 meaning_correct，语义一致即可判对，允许同义表达。\n"
+            "2. 仅输出 JSON，不要 Markdown。\n"
+            "JSON 结构：\n"
+            "{\n"
+            '  "results": [\n'
+            '    {"word": "与输入一致", "meaning_correct": true}\n'
+            "  ]\n"
+            "}\n"
+            f"批改数据：{json.dumps(payloads, ensure_ascii=False)}"
+        )
+        content = chat_completion(MEANING_GRADE_SYSTEM, prompt, stream=False)
+        data = parse_json_response(content)
+        if "results" not in data or not isinstance(data["results"], list):
+            raise RuntimeError("AI 释义批改输出缺少 results 数组")
+
+        by_word = {str(item.get("word", "")).lower(): item for item in data["results"]}
+        graded: list[dict] = []
+        for payload in payloads:
+            word = payload["word"]
+            item = by_word.get(word.lower())
+            if item is None:
+                raise RuntimeError(f"AI 释义批改结果缺少单词：{word}")
+            if "meaning_correct" not in item:
+                raise RuntimeError(f"AI 释义批改结果缺少 meaning_correct：{word}")
+            graded.append(
+                {
+                    "word": word,
+                    "meaning_correct": bool(item["meaning_correct"]),
+                }
+            )
         return graded

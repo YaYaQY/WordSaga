@@ -3,6 +3,7 @@ import re
 
 from app.config import VOCAB_JSON_PATH
 from app.schemas.vocabulary import SelectedWord
+from app.services.memory_service import MemoryService
 from app.services.review_scheduler import ReviewScheduler
 from app.storage.protocol import Store
 
@@ -65,9 +66,11 @@ class VocabularyEngine:
 
     def select_by_frequency(self, count: int, level: str, start_rank: int | None) -> list[SelectedWord]:
         start = start_rank if start_rank is not None else self.store.get_last_rank()
-        progress = self.store.get_word_progress()
+        progress = MemoryService(self.store).list_memory_cards()
         mastered_words = {
-            word for word, record in progress.items() if float(record.get("mastery", 0)) >= 0.85
+            word
+            for word, record in progress.items()
+            if record["status"] == "mastered" or record["mastery"] >= 0.85
         }
 
         review_words = self.scheduler.pick_review_words(count=count * 3 // 10, level=level)
@@ -130,3 +133,25 @@ class VocabularyEngine:
                 )
             )
         return selected
+
+    def select_due_review(self, count: int, level: str) -> list[SelectedWord]:
+        due_rows = self.scheduler.list_due_words(level=level, limit=count)
+        if len(due_rows) < count:
+            raise RuntimeError(f"待复习单词不足，当前仅 {len(due_rows)} 个，需要 {count} 个")
+        return [
+            SelectedWord(
+                word=row["word"],
+                rank=row["rank"],
+                frequency=row["frequency"],
+                level=row["level"],
+                meaning=row["meaning"],
+                source="review",
+            )
+            for row in due_rows[:count]
+        ]
+
+    def list_due_words(self, level: str, limit: int) -> list[dict]:
+        return self.scheduler.list_due_words(level=level, limit=limit)
+
+    def count_due_words(self, level: str) -> int:
+        return self.scheduler.count_due_words(level=level)
