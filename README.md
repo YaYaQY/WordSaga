@@ -5,6 +5,8 @@
 本地运行，数据存 JSON，无需数据库。
 
 ---
+<img width="1773" height="2364" alt="微信图片_20260602231611_23_3" src="https://github.com/user-attachments/assets/21b1bee9-5f8b-49a8-ae44-c62e63f6bf77" />
+
 
 ## 功能概览
 
@@ -72,7 +74,7 @@ WordSaga/
 ### 1. 环境要求
 
 - Python 3.10+
-- 可访问的 OpenAI 兼容 API（默认 [SiliconFlow](https://siliconflow.cn)）
+- 可访问的 OpenAI 兼容 API
 
 ### 2. 配置 `.env`
 
@@ -81,8 +83,7 @@ WordSaga/
 ```env
 OPENAI_API_KEY=你的_API_Key
 OPENAI_MODEL=你的模型名
-# 可选，默认 https://api.siliconflow.cn/v1
-OPENAI_BASE_URL=https://api.siliconflow.cn/v1
+OPENAI_BASE_URL=
 ```
 
 ### 3. 安装依赖
