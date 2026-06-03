@@ -1,6 +1,7 @@
 # WordSaga · 词境
 
 把单词放进 AI 写的小故事里，用「读 → 猜 → 写 → 默写」四步完成记忆；复习时复用历史例句，按 SM-2 间隔调度。
+
 ---
 <img width="1773" height="2364" alt="微信图片_20260602231611_23_3" src="https://github.com/user-attachments/assets/21b1bee9-5f8b-49a8-ae44-c62e63f6bf77" />
 
