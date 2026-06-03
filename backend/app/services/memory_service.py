@@ -14,7 +14,7 @@ SAME_DAY_SM2 = timedelta(hours=24)
 INCOMPLETE_DUE = timedelta(days=1)
 MASTERED_INTERVAL = 30
 MASTERED_LONG_INTERVAL = 90
-REVIEW_TRACK_SOURCES = {"review", "wrong"}
+REVIEW_TRACK_SOURCES = {"review", "wrong", "weak"}
 STAGE_WEIGHTS = {2: 0.2, 3: 0.3, 4: 0.5}
 PROMPT_BY_STAGE = {1: "context", 2: "recall_meaning", 3: "card", 4: "blind"}
 
@@ -169,6 +169,8 @@ class MemoryService:
         )
 
     def _save(self, memory: dict[str, dict], events: list[dict]) -> None:
+        for card in memory.values():
+            self._validate_card(card)
         self.store.save_word_memory(memory)
         if events:
             self.store.append_word_events(events)
@@ -596,5 +598,7 @@ class MemoryService:
                 self._refresh_leech(card)
                 self._refresh_status(card)
 
+        for card in memory.values():
+            self._validate_card(card)
         self.store.save_word_memory(memory)
         return len(memory)

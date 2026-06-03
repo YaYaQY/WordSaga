@@ -21,6 +21,15 @@ def vocabulary_count(store: Store = Depends(get_store)):
     return {"count": engine.vocabulary_count(), "source": "cet_full_list.json"}
 
 
+@router.get("/weak/count")
+def weak_word_count(
+    level: str = Query(default="basic"),
+    store: Store = Depends(get_store),
+):
+    engine = VocabularyEngine(store)
+    return {"level": level, "weak_count": engine.count_weak_words(level=level)}
+
+
 @router.get("/review/due", response_model=ReviewDueResponse)
 def list_due_words(
     level: str = Query(default="basic"),

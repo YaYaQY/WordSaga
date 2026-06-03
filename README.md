@@ -11,6 +11,7 @@
 |------|------|
 | **新学** | 按词频或手动选词 → AI 流式生成原创小故事 → 四阶段学习 |
 | **复习** | 到期词直接进入 stage3/4，复用你之前学过的例句，不重新写故事 |
+| **薄弱巩固** | 专练常错/掌握不稳/顽固词，不推进词频，复用例句走 stage3/4 |
 | **记忆系统** | 事件流 + 聚合卡片；SM-2 仅在 stage4 结束时更新一次 |
 | **批改** | stage3/4 由 AI 批量批改；stage3 提交后展示批改报告 |
 | **断点续学** | 首页「继续上次」+ `localStorage` 记录进度 |
@@ -61,8 +62,11 @@ WordSaga/
 │   ├── word_memory.json      # 单词记忆聚合卡片
 │   ├── word_events.json      # 学习事件流
 │   └── settings.json         # 词频进度等
-└── .env                      # API 密钥（需自行创建）
+├── .env.example              # 配置模板（复制为 .env）
+└── .gitignore                # 忽略 .env 与用户学习数据
 ```
+
+> **Git 说明**：`data/` 下的学习进度（`word_memory.json` 等）和 `.env` **不会**提交到仓库，只留在本机。克隆后需自行配置 `.env`；学习数据会在你使用过程中自动生成。
 
 ---
 
@@ -75,12 +79,18 @@ WordSaga/
 
 ### 2. 配置 `.env`
 
-在项目根目录创建 `.env`：
+复制模板并填写密钥：
+
+```powershell
+copy .env.example .env
+```
+
+编辑 `.env`：
 
 ```env
 OPENAI_API_KEY=你的_API_Key
 OPENAI_MODEL=你的模型名
-OPENAI_BASE_URL=
+OPENAI_BASE_URL=https://api.siliconflow.cn/v1
 ```
 
 ### 3. 安装依赖
@@ -121,6 +131,7 @@ python -m uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload --reload-di
 ### 新学
 
 1. 首页选「新学」→ 词频计划或手动指定单词  
+   - **词频模式**会自动混入约 **30%** 的到期/错题复习词；生成故事与读故事页会显示「本轮含 X 个复习词，Y 个新词」。纯新词复习请用首页「复习」入口。  
 2. 等待 AI 流式写故事（可边看边读）  
 3. 点「读完了，去猜词」进入四阶段  
 4. stage3 提交后查看 **批改报告**，再进入默写  
@@ -130,11 +141,28 @@ python -m uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload --reload-di
 
 1. 首页选「复习」→ 查看到期词数量  
 2. 开始复习后直接进入写卡片（复用历史例句）  
-3. 走完默写后 SM-2 更新复习间隔
+3. 缺少例句的词会自动跳过，界面会列出跳过名单  
+4. 走完默写后 SM-2 更新复习间隔
+
+### 薄弱巩固
+
+1. 首页选「薄弱巩固」→ 查看待巩固词数量  
+2. 不推进 `last_learned_rank`，专门练错题多、掌握度低、顽固词  
+3. 流程与复习相同（stage3/4 + 复用例句），同样会跳过无例句的词
+
+### 自选练习（手动）
+
+不推进词频进度，可重复指定同一批词；仍会写入学习事件与记忆曲线。
 
 ### 断点续学
 
-中途关闭页面后，再次打开首页会出现「继续上次」横幅，可从上次停留的阶段接着学。
+- **stage1–4**：首页「继续上次」回到对应阶段  
+- **故事未生成**：继续流式生成  
+- **生成中断**：可选择「继续写完」（清空半成品后重生成）或「放弃这轮」
+
+### 单词档案
+
+错题本中点击单词名，可查看掌握度、下次复习时间与学习事件时间线。
 
 ---
 
@@ -170,7 +198,10 @@ python scripts/recompute_memory.py
 |------|------|------|
 | `GET` | `/api/vocabulary/count` | 词库总量 |
 | `GET` | `/api/vocabulary/review/due` | 到期复习词 |
-| `POST` | `/api/sessions` | 创建 session（`mode`: `frequency` / `manual` / `review`） |
+| `POST` | `/api/sessions` | 创建 session（`mode`: `frequency` / `manual` / `review` / `weak`），返回 `skipped_words` |
+| `GET` | `/api/vocabulary/weak/count` | 薄弱巩固候选词数量 |
+| `POST` | `/api/sessions/{id}/reset-story` | 生成中断后清空半成品故事 |
+| `DELETE` | `/api/sessions/{id}` | 放弃未完成的生成 session |
 | `GET` | `/api/sessions/resumable` | 可续学的 session（无则 404） |
 | `POST` | `/api/sessions/{id}/generate/stream` | SSE 流式生成故事 |
 | `GET/POST` | `/api/sessions/{id}/stage/{1-4}` | 各阶段读写 |
@@ -204,17 +235,20 @@ python -m unittest tests.test_memory_service -v
 
 ## 常见问题
 
-**页面提示「无法连接后端」**  
-确认在 `backend` 目录启动了 Uvicorn，且端口 8000 未被占用。
-
-**故事生成超时**  
-词数较多或 API 较慢时，流式接口最长等待约 10 分钟；stage3/4 批改约 180 秒。
+| 界面提示 | 可能原因 | 处理 |
+|----------|----------|------|
+| 无法连接后端 | 未启动 Uvicorn 或端口不对 | 在 `backend` 目录执行 `.\run.ps1`，访问 http://127.0.0.1:8000/health |
+| 请求超时 | 默认 30s；故事流最长约 10 分钟；stage3/4 批改 180s | 减少本轮词数或换更快模型 |
+| API 密钥无效或未授权 | `.env` 中 `OPENAI_API_KEY` 错误 | 对照 `.env.example` 检查，必要时在平台轮换密钥 |
+| 请求过于频繁或被限流 | 上游 429 | 稍后再试或降低并发 |
+| 服务器错误（5xx） | 后端 `RuntimeError`（如记忆字段缺失） | 看终端日志；`word_memory` 过旧时运行 `migrate_memory.py` |
+| 缺少配置文件 | 无 `.env` | `copy .env.example .env` 并填写 |
 
 **复习词缺少例句**  
 复习依赖历史 session 中的 enriched 例句；若该词从未完整走完过新学流程，会报错，需先新学该词。
 
-**`.env` 缺失**  
-启动时会抛出 `缺少配置文件`，在项目根目录创建 `.env` 并填入上述变量。
+**从 Git 克隆后没有学习记录**  
+学习数据在本地 `data/`，不在仓库中，属正常现象。
 
 ---
 

@@ -187,6 +187,13 @@ class MemoryServiceTests(unittest.TestCase):
         now = datetime.now(timezone.utc) + timedelta(days=2)
         self.assertTrue(self.service.is_due(card, now))
 
+    def test_save_rejects_incomplete_card(self):
+        self.service.record_stage1_complete("s1", ["alpha"])
+        memory = self.store.memory
+        del memory["alpha"]["is_leech"]
+        with self.assertRaises(RuntimeError):
+            self.service._save(memory, [])
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -34,6 +34,14 @@ def load_env():
 def get_ai_client() -> tuple[OpenAI, str]:
     load_env()
     api_key = os.environ["OPENAI_API_KEY"]
-    base_url = os.environ.get("OPENAI_BASE_URL", "https://api.siliconflow.cn/v1").rstrip("/")
+    base_url = os.environ.get("OPENAI_BASE_URL", "https://api.siliconflow.cn/v1").strip().rstrip("/")
+    if not base_url.startswith(("http://", "https://")):
+        raise RuntimeError(
+            f"OPENAI_BASE_URL 必须以 http:// 或 https:// 开头，当前为：{base_url!r}"
+        )
     model = os.environ["OPENAI_MODEL"]
     return OpenAI(api_key=api_key, base_url=base_url), model
+
+
+def build_thinking_extra_body(enable_thinking: bool) -> dict:
+    return {"thinking": {"type": "enabled" if enable_thinking else "disabled"}}

@@ -1,0 +1,18 @@
+.env
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# 用户学习进度（词库 cet_full_list.json 仍提交）
+data/learning_data.json
+data/word_memory.json
+data/word_events.json
+data/settings.json
+data/wrong_records.json
+data/word_progress.json
+data/progress.json
+data/sessions.json
+data/wordsaga.db

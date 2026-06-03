@@ -7,7 +7,12 @@ from dataclasses import dataclass
 from app.config import ENRICH_MAX_WORKERS, resolve_chapter_word_size
 from app.schemas.story import StoryChapterOut, StoryPackageOut, WordOccurrence
 from app.schemas.vocabulary import SelectedWord
-from app.services.ai_client import chat_completion, iter_chat_completion, parse_json_response
+from app.services.ai_client import (
+    PREVIEW_MAX_TOKENS,
+    chat_completion,
+    iter_chat_completion_parts,
+    parse_json_response,
+)
 from app.storage.protocol import Store
 
 STORY_PREVIEW_SYSTEM = "你只输出严格 JSON，用于 WordSaga 快速剧情预览。"
@@ -120,15 +125,39 @@ class StoryEngine:
             f"目标单词：{json.dumps(self._word_payload(words), ensure_ascii=False)}"
         )
 
-    def _collect_stream_content(self, system: str, prompt: str, chapter_index: int):
+    def _collect_stream_content(
+        self,
+        system: str,
+        prompt: str,
+        chapter_index: int,
+        *,
+        enable_thinking: bool,
+    ):
         parts: list[str] = []
-        for delta in iter_chat_completion(system, prompt):
-            parts.append(delta)
-            yield {"type": "delta", "chapter_index": chapter_index, "text": delta}
+        thinking_sent = False
+        for kind, piece in iter_chat_completion_parts(
+            system,
+            prompt,
+            max_tokens=PREVIEW_MAX_TOKENS,
+            enable_thinking=enable_thinking,
+        ):
+            if kind == "thinking":
+                if not thinking_sent:
+                    yield {"type": "thinking", "chapter_index": chapter_index}
+                    thinking_sent = True
+                continue
+            parts.append(piece)
+            yield {"type": "delta", "chapter_index": chapter_index, "text": piece}
         content = "".join(parts)
         if not content.strip():
             logger.warning("第 %s 章流式正文为空，回退非流式", chapter_index)
-            content = chat_completion(system, prompt, stream=False)
+            content = chat_completion(
+                system,
+                prompt,
+                stream=False,
+                max_tokens=PREVIEW_MAX_TOKENS,
+                enable_thinking=enable_thinking,
+            )
         return content
 
     def _parse_preview(self, content: str) -> PreviewChapter:
@@ -214,15 +243,17 @@ class StoryEngine:
 
         chunks = self._split_words(selected_words)
         chapter_total = len(chunks)
+        enable_thinking = bool(session.get("enable_thinking", False))
         world_context: dict = {}
         chapter_rows: list[dict] = []
         story_title = ""
 
         logger.info(
-            "开始快速预览 session=%s 词数=%s 章节=%s",
+            "开始快速预览 session=%s 词数=%s 章节=%s thinking=%s",
             session_id,
             len(selected_words),
             chapter_total,
+            enable_thinking,
         )
         yield {"type": "start", "chapter_total": chapter_total, "session_id": session_id}
 
@@ -236,7 +267,9 @@ class StoryEngine:
             prompt = self._build_preview_prompt(
                 chunk, session["style"], index, chapter_total, world_context
             )
-            preview_gen = self._collect_stream_content(STORY_PREVIEW_SYSTEM, prompt, index)
+            preview_gen = self._collect_stream_content(
+                STORY_PREVIEW_SYSTEM, prompt, index, enable_thinking=enable_thinking
+            )
             raw_content = ""
             try:
                 while True:

@@ -67,3 +67,10 @@ class LocalStore:
         session = self.get_session(session_id)
         session.update(updates)
         self.save_session(session)
+
+    def delete_session(self, session_id: str):
+        sessions = self.get_sessions()
+        if session_id not in sessions:
+            raise RuntimeError(f"Session 不存在：{session_id}")
+        del sessions[session_id]
+        self._write(LEARNING_DATA_PATH, {"sessions": sessions})

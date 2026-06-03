@@ -5,6 +5,7 @@ class CreateSessionRequest(BaseModel):
     mode: str
     level: str = "basic"
     style: str = "原创唐朝悬疑"
+    enable_thinking: bool = False
     count: int | None = Field(default=None, ge=1, le=300)
     start_rank: int | None = None
     words: list[str] | None = None
@@ -26,6 +27,16 @@ class SessionOut(BaseModel):
     words: list[SessionWordOut]
 
 
+class SkippedWordOut(BaseModel):
+    word: str
+    reason: str
+
+
+class CreateSessionResponse(BaseModel):
+    session: SessionOut
+    skipped_words: list[SkippedWordOut]
+
+
 class ResumableSessionOut(BaseModel):
     id: str
     mode: str
@@ -34,3 +45,4 @@ class ResumableSessionOut(BaseModel):
     word_count: int
     words: list[SessionWordOut]
     story_title: str | None
+    resume_kind: str

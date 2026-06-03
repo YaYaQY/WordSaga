@@ -5,7 +5,12 @@ from fastapi import APIRouter, Depends, HTTPException
 from fastapi.responses import StreamingResponse
 
 from app.deps import get_store
-from app.schemas.session import CreateSessionRequest, ResumableSessionOut, SessionOut
+from app.schemas.session import (
+    CreateSessionRequest,
+    CreateSessionResponse,
+    ResumableSessionOut,
+    SessionOut,
+)
 from app.schemas.story import StoryEnrichmentOut, StoryPackageOut
 from app.services.session_service import SessionService
 from app.services.story_engine import StoryEngine
@@ -21,13 +26,32 @@ def _pull_stream_event(generator):
         return None
 
 
-@router.post("", response_model=SessionOut)
+@router.post("", response_model=CreateSessionResponse)
 def create_session(payload: CreateSessionRequest, store: Store = Depends(get_store)):
     service = SessionService(store)
     try:
         return service.create_session(payload)
     except RuntimeError as error:
         raise HTTPException(status_code=400, detail=str(error)) from error
+
+
+@router.post("/{session_id}/reset-story", response_model=SessionOut)
+def reset_session_story(session_id: str, store: Store = Depends(get_store)):
+    service = SessionService(store)
+    try:
+        return service.reset_story(session_id)
+    except RuntimeError as error:
+        raise HTTPException(status_code=400, detail=str(error)) from error
+
+
+@router.delete("/{session_id}")
+def abandon_session(session_id: str, store: Store = Depends(get_store)):
+    service = SessionService(store)
+    try:
+        service.abandon_session(session_id)
+    except RuntimeError as error:
+        raise HTTPException(status_code=400, detail=str(error)) from error
+    return {"ok": True}
 
 
 @router.get("/resumable", response_model=ResumableSessionOut)
@@ -62,18 +86,20 @@ async def generate_story_stream(session_id: str, store: Store = Depends(get_stor
     engine = StoryEngine(store)
 
     async def event_stream():
+        yield ": connected\n\n"
         generator = engine.iter_generate_for_session(session_id)
         loop = asyncio.get_running_loop()
         while True:
             try:
                 event = await loop.run_in_executor(None, _pull_stream_event, generator)
-            except RuntimeError as error:
+            except Exception as error:
                 payload = json.dumps({"type": "error", "message": str(error)}, ensure_ascii=False)
                 yield f"data: {payload}\n\n"
                 break
             if event is None:
                 break
             yield f"data: {json.dumps(event, ensure_ascii=False)}\n\n"
+            await asyncio.sleep(0)
 
     return StreamingResponse(
         event_stream(),

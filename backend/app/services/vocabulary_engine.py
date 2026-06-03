@@ -5,6 +5,7 @@ from app.config import VOCAB_JSON_PATH
 from app.schemas.vocabulary import SelectedWord
 from app.services.memory_service import MemoryService
 from app.services.review_scheduler import ReviewScheduler
+from app.services.weak_scheduler import WeakScheduler
 from app.storage.protocol import Store
 
 _VOCAB_CACHE: list[dict] | None = None
@@ -23,6 +24,7 @@ class VocabularyEngine:
         self.store = store
         self._vocabulary = self._load_vocabulary()
         self.scheduler = ReviewScheduler(store, self._vocabulary)
+        self.weak_scheduler = WeakScheduler(store, self._vocabulary)
 
     def _load_vocabulary(self) -> list[dict]:
         global _VOCAB_CACHE
@@ -136,8 +138,8 @@ class VocabularyEngine:
 
     def select_due_review(self, count: int, level: str) -> list[SelectedWord]:
         due_rows = self.scheduler.list_due_words(level=level, limit=count)
-        if len(due_rows) < count:
-            raise RuntimeError(f"待复习单词不足，当前仅 {len(due_rows)} 个，需要 {count} 个")
+        if not due_rows:
+            raise RuntimeError("目前没有到期的复习词")
         return [
             SelectedWord(
                 word=row["word"],
@@ -149,6 +151,15 @@ class VocabularyEngine:
             )
             for row in due_rows[:count]
         ]
+
+    def select_weak_words(self, count: int, level: str) -> list[SelectedWord]:
+        selected = self.weak_scheduler.pick_weak_words(count=count, level=level)
+        if not selected:
+            raise RuntimeError("目前没有需要薄弱巩固的词")
+        return selected
+
+    def count_weak_words(self, level: str) -> int:
+        return self.weak_scheduler.count_weak_words(level)
 
     def list_due_words(self, level: str, limit: int) -> list[dict]:
         return self.scheduler.list_due_words(level=level, limit=limit)

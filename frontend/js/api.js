@@ -1,6 +1,54 @@
 const API_BASE = "";
 const DEFAULT_TIMEOUT_MS = 30000;
 
+function formatApiDetail(detail) {
+  if (typeof detail === "string") {
+    return detail;
+  }
+  if (Array.isArray(detail)) {
+    return detail.map((item) => item.msg || JSON.stringify(item)).join("；");
+  }
+  return null;
+}
+
+async function readJsonResponse(response) {
+  const text = await response.text();
+  if (!text) {
+    return null;
+  }
+  return JSON.parse(text);
+}
+
+function buildHttpError(response, data) {
+  const detail = data ? formatApiDetail(data.detail) : null;
+  if (response.status === 401 || response.status === 403) {
+    return new Error(detail || "API 密钥无效或未授权，请检查 .env 中的 OPENAI_API_KEY");
+  }
+  if (response.status === 429) {
+    return new Error(detail || "请求过于频繁或被限流，请稍后再试");
+  }
+  if (response.status >= 500) {
+    return new Error(detail || `服务器错误（${response.status}），请查看后端终端日志`);
+  }
+  if (response.status === 400) {
+    return new Error(detail || `请求无效（${response.status}）`);
+  }
+  if (response.status === 404) {
+    return new Error(detail || "资源不存在");
+  }
+  return new Error(detail || `请求失败：${response.status}`);
+}
+
+function buildNetworkError(error) {
+  if (error.name === "AbortError") {
+    return new Error("请求超时，请确认后端已在 backend 目录启动");
+  }
+  if (error instanceof TypeError) {
+    return new Error("无法连接后端，请确认已在 backend 目录启动服务（http://127.0.0.1:8000）");
+  }
+  return error;
+}
+
 async function request(path, options = {}) {
   const { timeout = DEFAULT_TIMEOUT_MS, ...fetchOptions } = options;
   const controller = new AbortController();
@@ -12,16 +60,13 @@ async function request(path, options = {}) {
       signal: controller.signal,
       ...fetchOptions,
     });
-    const data = await response.json().catch(() => ({}));
+    const data = await readJsonResponse(response);
     if (!response.ok) {
-      throw new Error(data.detail || `请求失败：${response.status}`);
+      throw buildHttpError(response, data);
     }
     return data;
   } catch (error) {
-    if (error.name === "AbortError") {
-      throw new Error("请求超时，请确认后端已在 backend 目录启动");
-    }
-    throw error;
+    throw buildNetworkError(error);
   } finally {
     clearTimeout(timer);
   }
@@ -52,6 +97,20 @@ export const api = {
     }),
   createSession: (body) =>
     request("/api/sessions", { method: "POST", body: JSON.stringify(body) }),
+  resetStory: (sessionId) =>
+    request(`/api/sessions/${sessionId}/reset-story`, { method: "POST" }),
+  abandonSession: async (sessionId) => {
+    const response = await fetch(`${API_BASE}/api/sessions/${sessionId}`, { method: "DELETE" });
+    const data = await readJsonResponse(response);
+    if (!response.ok) {
+      throw buildHttpError(response, data);
+    }
+    return data;
+  },
+  getWeakCount: (level = "basic") =>
+    request(`/api/vocabulary/weak/count?level=${encodeURIComponent(level)}`),
+  getWordMemory: (word) => request(`/api/words/${encodeURIComponent(word)}/memory`),
+  getWordEvents: (word) => request(`/api/words/${encodeURIComponent(word)}/events`),
   generateStory: (sessionId) =>
     request(`/api/sessions/${sessionId}/generate`, { method: "POST", timeout: 600000 }),
   generateStoryStream: async (sessionId, onEvent) => {
@@ -65,16 +124,18 @@ export const api = {
       });
     } catch (error) {
       clearTimeout(timer);
-      if (error.name === "AbortError") {
-        throw new Error("剧情生成超时，请稍后重试");
-      }
-      throw error;
+      throw buildNetworkError(error);
     }
 
     if (!response.ok) {
       clearTimeout(timer);
-      const data = await response.json().catch(() => ({}));
-      throw new Error(data.detail || `请求失败：${response.status}`);
+      const data = await readJsonResponse(response);
+      throw buildHttpError(response, data);
+    }
+
+    if (!response.body) {
+      clearTimeout(timer);
+      throw new Error("服务器未返回流式数据");
     }
 
     const reader = response.body.getReader();
@@ -92,6 +153,11 @@ export const api = {
       if (buffer.trim()) {
         parseSseBuffer(`${buffer}\n`, onEvent);
       }
+    } catch (error) {
+      if (error.name === "AbortError") {
+        throw new Error("剧情生成超时，请稍后重试");
+      }
+      throw error;
     } finally {
       clearTimeout(timer);
     }
@@ -124,13 +190,18 @@ export const api = {
   getReviewDue: (level = "basic", limit = 50) =>
     request(`/api/vocabulary/review/due?level=${encodeURIComponent(level)}&limit=${limit}`),
   getResumable: async () => {
-    const response = await fetch(`${API_BASE}/api/sessions/resumable`);
+    let response;
+    try {
+      response = await fetch(`${API_BASE}/api/sessions/resumable`);
+    } catch (error) {
+      throw buildNetworkError(error);
+    }
     if (response.status === 404) {
       return null;
     }
-    const data = await response.json();
+    const data = await readJsonResponse(response);
     if (!response.ok) {
-      throw new Error(data.detail || `请求失败：${response.status}`);
+      throw buildHttpError(response, data);
     }
     return data;
   },

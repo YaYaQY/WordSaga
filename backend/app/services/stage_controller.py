@@ -87,7 +87,7 @@ class StageController:
         new_words = [
             row["word"]
             for row in session["words"]
-            if row["source"] not in {"review", "wrong"}
+            if row["source"] not in {"review", "wrong", "weak"}
         ]
         self.memory.record_stage1_complete(session_id, new_words)
         self.store.update_session(session_id, {"status": "stage2"})
@@ -161,11 +161,11 @@ class StageController:
         self._ensure_story_enriched(session_id)
         session = self.store.get_session(session_id)
         story = session["story"]
-        if session.get("mode") == "review":
+        if session.get("mode") in {"review", "weak"}:
             context_words = self._session_words(session)
         else:
             context_words = [
-                row["word"] for row in session["words"] if row["source"] in {"review", "wrong"}
+                row["word"] for row in session["words"] if row["source"] in {"review", "wrong", "weak"}
             ]
         if context_words:
             self.memory.record_review_context(session_id, context_words)
